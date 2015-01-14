@@ -166,24 +166,30 @@ $(function(){
 	var minB_load = window.localStorage.getItem('MinuteB');
 	if(min_load)
 	{
-		alert(min_load);
+		//alert(min_load);
+		window.localStorage.setItem('Minute',"0min");
+		document.getElementById('msg').innerHTML="Sleep"+min_load+"more";
 	}
 	else
 	{
 		if(minB_load)
 		{
-			alert(minB_load);
+			//alert(minB_load);
+			window.localStorage.setItem('MinuteB',"0min");
+			document.getElementById('msg').innerHTML="Sleep"+minB_load+"more";
 		}
 		else
 		{
 			if(heure_load)
 			{
-				alert(heure_load);
+				//alert(heure_load);
+				window.localStorage.setItem('Heure',"0h");
+				document.getElementById('msg').innerHTML="Sleep"+heure_load+"more";
 			}
 		}
 	}
 	
-	document.getElementById('msg').innerHTML="momo";
+	
 	//alert(trigger_value);
 	if((trigger_value==100)&&(stop!=1))
 	{
