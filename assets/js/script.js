@@ -145,7 +145,7 @@ $(function(){
 	$('#alarm-stop').click(function(){
 		$('#alarm-ring')[0].pause();
 		$('#alarm-ring')[0].currentTime = 0;
-		window.localStorage.setItem('trigger',-1);	
+		window.localStorage.setItem('trigger',"-1");	
 	});
 	// Handle setting and clearing alamrs
 
