@@ -145,16 +145,17 @@ $(function(){
 	var trigger_value=window.localStorage.getItem('trigger');
 	if(trigger_value)
 	{
-		if(trigger_value==-400)
-		{
-			if(stop==0)
-			{
+		alert(trigger_value);
+	//	if(trigger_value==-400)
+	//	{
+		//	if(stop==0)
+		//	{
 				//Repeat each 5s
-				window.setInterval(function(){
-					alarm_counter = 0;
-				}, 5000);	
-			}
-		}
+			//	window.setInterval(function(){
+			//		alarm_counter = 0;
+			//	}, 5000);	
+		//	}
+		//}
 	}
 	//slide stop
 	$('#alarm-stop').click(function(){
