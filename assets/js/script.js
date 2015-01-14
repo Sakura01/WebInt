@@ -182,7 +182,20 @@ $(function(){
 		aft=to_secs[2]*parseInt(mins[0]);
 		alarm_counter = aft;
 	}
-
+	else if(mintB)
+	{
+		var mins=mintB.split("m");
+		var aft = 0,to_secs = [3600, 60, 1];
+		aft=to_secs[2]*parseInt(mins[0]);
+		alarm_counter = aft;
+	}
+	else
+	{
+		var hous=hou.split("m");
+		var aft = 0,to_secs = [3600, 60, 1];
+		aft=to_secs[2]*parseInt(hous[0]);
+		alarm_counter = aft;
+	}
 
 	//get file browsed
 	
