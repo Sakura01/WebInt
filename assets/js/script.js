@@ -145,6 +145,7 @@ $(function(){
 	$('#alarm-stop').click(function(){
 		$('#alarm-ring')[0].pause();
 		$('#alarm-ring')[0].currentTime = 0;
+		trigger_value=200;
 	});
 	// Handle setting and clearing alamrs
 
@@ -202,7 +203,7 @@ $(function(){
 		}
 	});
 
-
+	//Change
 	alarm_set.click(function(){
 
 		var valid = true, after = 0,
@@ -218,7 +219,7 @@ $(function(){
 				// or a number less than the min value
 
 				valid = false;
-				this.focus();
+				//this.focus();
 
 				return false;
 			}
