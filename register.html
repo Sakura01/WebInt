@@ -120,6 +120,8 @@ $('#test').click(function() {
 	var email = document.getElementById("emailsignup").value;
 	var pass = document.getElementById("passwordsignup").value;
 	var result = emailT.split('@')[0];
+	
+	alert("merde");
 	if(result.indexOf(".") != -1)
 	
 		window.localStorage.setItem('distinction',0);
@@ -127,7 +129,7 @@ $('#test').click(function() {
 		
 		window.localStorage.setItem('distinction',1);
 
-	alert("merde");
+	alert("merde!!!!");
     
    
 
