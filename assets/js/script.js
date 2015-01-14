@@ -145,7 +145,11 @@ $(function(){
 	$('#alarm-stop').click(function(){
 		$('#alarm-ring')[0].pause();
 		$('#alarm-ring')[0].currentTime = 0;
-		trigger_value=200;
+		var trigger_value = window.localStorage.getItem('trigger');
+		if(trigger_value==100)
+		{
+			trigger_value=200;	
+		}
 	});
 	// Handle setting and clearing alamrs
 
@@ -166,9 +170,9 @@ $(function(){
 	if(trigger_value==100)
 	{
 		//Repeat each 5s
-				window.setInterval(function(){
-					alarm_counter = 0;
-				}, 5000);
+		window.setInterval(function(){
+			alarm_counter = 0;
+		}, 5000);
 	}
 	//get file browsed
 	
@@ -203,7 +207,6 @@ $(function(){
 		}
 	});
 
-	//Change
 	alarm_set.click(function(){
 
 		var valid = true, after = 0,
@@ -219,7 +222,7 @@ $(function(){
 				// or a number less than the min value
 
 				valid = false;
-				//this.focus();
+				this.focus();
 
 				return false;
 			}
