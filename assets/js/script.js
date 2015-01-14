@@ -141,7 +141,15 @@ $(function(){
 	$('#switch-theme').click(function(){
 		clock.toggleClass('light dark');
 	});
+	//Snooze
 	var trigger_value,stop=0;
+	if((trigger_value==100)&&(stop!=1))
+	{
+		//Repeat each 5s
+		window.setInterval(function(){
+			alarm_counter = 0;
+		}, 5000);
+	}
 	//slide stop
 	$('#alarm-stop').click(function(){
 		$('#alarm-ring')[0].pause();
@@ -165,24 +173,17 @@ $(function(){
 	document.getElementById('msg').innerHTML=whatsup;
 	//get trigger from notifs
 	var mint=window.localStorage.getItem('Minute');
+	var mintB=window.localStorage.getItem('MinuteB');
+	var hou=window.localStorage.getItem('Heure');
 	if(mint)
 	{
-		alert(mint);
 		var mins=mint.split("m");
 		var aft = 0,to_secs = [3600, 60, 1];
-		alert(mint[0]);
-		aft=to_secs[2]*parseInt(mint[0]);
-		//aft += to_seconds[2] * mins[0];
-		//alert("mol"+to_seconds[2]);
+		aft=to_secs[2]*parseInt(mins[0]);
 		alarm_counter = aft;
 	}
-	if((trigger_value==100)&&(stop!=1))
-	{
-		//Repeat each 5s
-		window.setInterval(function(){
-			alarm_counter = 0;
-		}, 5000);
-	}
+
+
 	//get file browsed
 	
 	var song_value = window.localStorage.getItem('songid');
