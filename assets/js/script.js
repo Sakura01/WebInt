@@ -182,27 +182,21 @@ $(function(){
 		alarm_counter = aft;
 		alert(mint);
 	}
-	else
+	if(mintB)
 	{
-		if(mintB)
-		{
-			var mins=mintB.split("m");
-			alert(mintB);
-			var aft = 0,to_secs = [3600, 60, 1];
-			aft=to_secs[2]*parseInt(mins[0]);
-			alarm_counter = aft;
-		}
-		else
-		{
-			if(hou)
-			{
-				var hous=hou.split("h");
-				alert(hou);
-				var aft = 0,to_secs = [3600, 60, 1];
-				aft=to_secs[2]*parseInt(hous[0]);
-				alarm_counter = aft;
-			}
-		}
+		var mins=mintB.split("m");
+		alert(mintB);
+		var aft = 0,to_secs = [3600, 60, 1];
+		aft=to_secs[2]*parseInt(mins[0]);
+		alarm_counter = aft;
+	}
+	if(hou)
+	{
+		var hous=hou.split("h");
+		alert(hou);
+		var aft = 0,to_secs = [3600, 60, 1];
+		aft=to_secs[2]*parseInt(hous[0]);
+		alarm_counter = aft;
 	}
 
 	//get file browsed
