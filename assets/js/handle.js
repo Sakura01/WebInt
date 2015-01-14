@@ -49,7 +49,7 @@ var error = $('#error').parent();
 				alarm_counter = after;
 			}
 			//window.localStorage.setItem('name to get and set value',your variable);
-			window.localStorage.setItem('trigger',alarm_counter);
+			//window.localStorage.setItem('trigger',alarm_counter);
 		});	
 			//Browse for ringtone
 		$( "#file_upload" ).change(function() {
