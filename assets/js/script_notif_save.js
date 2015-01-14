@@ -10,8 +10,8 @@ $('#late').click(function(){
 		if(heure_bis)
 		{
 			window.localStorage.setItem('Heure',heure);
-			window.localStorage.setItem('Minute',0);
-			window.localStorage.setItem('MinuteB',0);
+			window.localStorage.setItem('Minute',-100);
+			window.localStorage.setItem('MinuteB',-100);
 				
 		}
 		else
@@ -19,23 +19,23 @@ $('#late').click(function(){
 			if(minute_bar)
 			{
 				window.localStorage.setItem('MinuteB',minute_bar);
-				window.localStorage.setItem('Minute',0);
-				window.localStorage.setItem('Heure',0);
+				window.localStorage.setItem('Minute',-100);
+				window.localStorage.setItem('Heure',-100);
 				
 			}
 			else
 			{
-				window.localStorage.setItem('MinuteB',0);
-				window.localStorage.setItem('Minute',0);
-				window.localStorage.setItem('Heure',0);	
+				window.localStorage.setItem('MinuteB',-100);
+				window.localStorage.setItem('Minute',-100);
+				window.localStorage.setItem('Heure',-100);	
 			}
 		}
 	}
 	else
 	{
 		window.localStorage.setItem('Minute',minute);
-		window.localStorage.setItem('Heure',0);
-		window.localStorage.setItem('MinuteB',0);
+		window.localStorage.setItem('Heure',-100);
+		window.localStorage.setItem('MinuteB',-100);
 		
 	}
 
