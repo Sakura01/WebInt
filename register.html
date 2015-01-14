@@ -61,7 +61,7 @@
 				<div class="button">
 				<img src="assets/img/menu.png"/>
 				</div>
-				<form  name="myForm" action="" autocomplete="on"> 
+				<form  name="myForm" autocomplete="on"> 
 					<h1> Who are you? </h1> 
 					<p> 
 						<label for="usernamesignup" class="uname" >Username</label></br>
@@ -93,7 +93,7 @@
 					
 					<div class="overlay">
 						<div id="error">
-							<h2>Wrong password</h2>
+							<h2>Fiels incomplete or wrong email format</h2>
 							<div class="button-holder">
 								<a class="button blue">Close</a>
 							</div>
@@ -114,26 +114,8 @@
 <script src="assets/js/menu.js"></script>
 <script Language="JavaScript">
 var error = $('#error').parent();
-$('#test').click(function(){
-	alert("merde");
-	var user = document.getElementById("usernamesignup").value;
-	var emailT = document.getElementById("emailsignup").value;
-	var pass = document.getElementById("passwordsignup").value;
-	var result = emailT.split('@')[0];
-	if(result.indexOf(".") != -1)
-	
-		window.localStorage.setItem('distinction',0);
-	else
-		
-		window.localStorage.setItem('distinction',1);
-	
-	var x = document.forms["myForm"]["emailsignup"].value;
-    	var atpos = x.indexOf("@");
-    	var dotpos = x.lastIndexOf(".");
-    	if (!user || !pas || atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length ||) {
-    		error.fadeIn();	
-    	}
-    	else
+$('#test').click(function() {
+
 		 location.href='new_tell_me_more.html';
 
 });
