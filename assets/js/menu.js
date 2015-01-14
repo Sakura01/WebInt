@@ -65,7 +65,7 @@
 		window.location = "index.html";
 		
 	});
-	//To do
+
 	$('#buttonSteps').on(click, function(e){
 		e.preventDefault();
 		closeMenu();
@@ -81,7 +81,16 @@
 	$('#buttonNotification').on(click, function(e){
 		e.preventDefault();
 		closeMenu();
-		window.location = "notify_student.html";
+		var who=window.localStorage.getItem('Distinction');
+		if(who==0)
+		{
+			window.location = "notify_teacher.html";	
+		}
+		else
+		{
+		 	window.location = "notify_student.html";	
+		}
+		
 		
 	});
 	$('#buttonDevice').on(click, function(e){
