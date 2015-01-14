@@ -142,7 +142,7 @@ $(function(){
 	});
 	//Snooze
 	var trigger_value=window.localStorage.getItem('trigger');
-	var state=trigger_value.localCompare("off");
+	var state=trigger_value.localCompare("on");
 	if(state==0)
 	{
 		//Repeat each 5s
