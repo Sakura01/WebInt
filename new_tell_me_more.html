@@ -13,18 +13,7 @@
 	<!-- Montserrat Sans -->
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400, 700' rel='stylesheet' type='text/css'>   
 
-		<script>
-		function validate(){
-		x=document.myForm
-		txt=x.tell_me.value
-		if (txt=>0 && txt<=60) {
-			return true
-		}else{
-			alert("Please enter all values between 0 to 60")
-			return false
-		}
-		}
-		</script>
+	
 </head>
 <body>
 
@@ -78,14 +67,14 @@
 						<img src="assets/img/menu.png"/>
 					</div>
 					
-					<form action="new_make_smarter.html" name="myForm" onsubmit="return validate()">
+					<form action="new_make_smarter.html" name="myForm" onsubmit="">
 					<h1> Tell me more </h1>
 					<b>How long to prepare?</b><br>
-					From&nbsp;<input type="text" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;to&nbsp;&nbsp;<input type="text" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b><br><br>
+					From&nbsp;<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;to&nbsp;&nbsp;<input type="text" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b><br><br>
 					<b>How long to school?</b><br>
-					From&nbsp;<input type="text" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;to&nbsp;&nbsp;<input type="text" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b><br><br>
+					From&nbsp;<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;to&nbsp;&nbsp;<input type="text" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b><br><br>
 					<b>Arrive early?</b><br>
-					<input type="text" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;Before start<br><br>
+					<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;Before start<br><br>
 					<p class="yes button">
 					<input type="button" value="OK" name="submit" />
 					</p>
