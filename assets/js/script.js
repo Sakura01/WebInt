@@ -141,12 +141,15 @@ $(function(){
 	$('#switch-theme').click(function(){
 		clock.toggleClass('light dark');
 	});
+	//get trigger
+	var trigger_value = window.localStorage.getItem('trigger');
 	//slide stop
 	$('#alarm-stop').click(function(){
 		$('#alarm-ring')[0].pause();
 		$('#alarm-ring')[0].currentTime = 0;
 		window.localStorage.setItem('trigger',"-1");
-		alert(alarm_counter);
+		trigger_value=-1;
+		alarm_counter=-1;
 	});
 	// Handle setting and clearing alamrs
 
@@ -157,8 +160,7 @@ $(function(){
 
 	});
 	
-	//get trigger
-	var trigger_value = window.localStorage.getItem('trigger');
+	
 	alarm_counter=trigger_value;
 	//get msg
 	
