@@ -141,21 +141,26 @@ $(function(){
 		clock.toggleClass('light dark');
 	});
 	//Snooze
-	var stop;
+	var stop=0;
 	var trigger_value=window.localStorage.getItem('trigger');
 	if(trigger_value)
 	{
-		alert(trigger_value);
-	//	if(trigger_value==-400)
-	//	{
-		//	if(stop==0)
-		//	{
+			alert(trigger_value);
+			var state=trigger_value.localCompare("on");
+			if(state==0)
+			{
+				if(stop==0)
 				//Repeat each 5s
-			//	window.setInterval(function(){
-			//		alarm_counter = 0;
-			//	}, 5000);	
-		//	}
-		//}
+				{
+					window.setInterval(function(){
+					alarm_counter = 0;
+					}, 5000);
+				}
+			}
+			else
+			{
+				stop=1;
+			}
 	}
 	//slide stop
 	$('#alarm-stop').click(function(){
