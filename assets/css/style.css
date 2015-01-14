@@ -176,7 +176,7 @@
 	}
 	/*relative*/
 	.bubble{
-	  position:absolute;
+	  position:relative;
 	  display: inline-block;
 	  top:10px;
 	  padding: 20px;
@@ -185,7 +185,7 @@
 	  background:#00c7cc;
 	  border:2px solid #0ca8b2;
 	  border-radius:20px;
-	  outline:0;
+	  /*outline:0;*/
 	}
 	.bubble:after{
 	  content: ' ';
