@@ -183,7 +183,6 @@ $(function(){
 				if(mintB!=-100)
 				{
 					var mins=mintB.split("m");
-					alert(mintB);
 					var aft = 0,to_secs = [3600, 60, 1];
 					aft=to_secs[2]*parseInt(mins[0]);
 					alarm_counter = aft;		
@@ -195,7 +194,6 @@ $(function(){
 						if(hou!=-100)
 						{
 							var hous=hou.split("h");
-							alert(hou);
 							var aft = 0,to_secs = [3600, 60, 1];
 							aft=to_secs[2]*parseInt(hous[0]);
 							alarm_counter = aft;	
@@ -210,7 +208,6 @@ $(function(){
 			var aft = 0,to_secs = [3600, 60, 1];
 			aft=to_secs[2]*parseInt(mins[0]);
 			alarm_counter = aft;
-			alert(mint);
 		}
 	}
 
