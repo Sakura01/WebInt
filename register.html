@@ -65,19 +65,19 @@
 					<h1> Who are you? </h1> 
 					<p> 
 						<label for="usernamesignup" class="uname" >Username</label></br>
-						<input id="usernamesignup" name="usernamesignup"  type="text" placeholder="name" />
+						<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="name" />
 					</p>
 					<p> 
 						<label for="emailsignup" class="youmail" > Email</label> </br>
-						<input id="emailsignup" name="emailsignup"  type="email" placeholder="name@eurecom.com"/> 
+						<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="name@eurecom.com"/> 
 					</p>
 					<p> 
 						<label for="passwordsignup" class="youpasswd" >Password </label> </br>
-						<input id="passwordsignup" name="passwordsignup"  type="password" placeholder="eg. X8df!90EO"/>
+						<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
 					</p>
 					
 					<p class="signin button"> 
-						<input type="button" id="boutton" value="Register"/> 
+						<input type="submit" id="test" value="Register" onclick="location.href='new_tell_me_more.html'"/> 
 					</p>
 					<div>
 						<em id="steps">step1</em> 
@@ -90,16 +90,6 @@
 						Already registered ?
 						<a href="login.html#tologin"> Login </a>
 					</p>
-					
-					<div class="overlay">
-						<div id="error">
-							<h2>Fiels incomplete or wrong email format</h2>
-							<div class="button-holder">
-								<a class="button blue">Close</a>
-							</div>
-
-						</div>
-					</div>
 				</form>
 			</div>
 			
@@ -113,8 +103,7 @@
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 <script src="assets/js/menu.js"></script>
 <script Language="JavaScript">
-
-$('#boutton').click(function() {
+$('#test').click(function(){
 	
 	var emailT = document.getElementById("emailsignup").value;
 	var result = emailT.split('@')[0];
@@ -124,13 +113,7 @@ $('#boutton').click(function() {
 	else
 		
 		window.localStorage.setItem('distinction',1);
-
-	location.href='new_tell_me_more.html';
-
-
 });
-
-
 
 </script>
 
