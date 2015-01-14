@@ -18,6 +18,7 @@ var error = $('#error').parent();
 
 		$('input[name="trigger-choice"]').change(function() {
 			var triggered = this.value;
+			alert("s"+triggered);
 			window.localStorage.setItem('trigger',triggered);
 		});	
 			//Browse for ringtone
