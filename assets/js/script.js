@@ -162,7 +162,7 @@ $(function(){
 	alarm_counter=trigger_value;
 	//get msg
 	
-	document.getElementById('msg').value="momo";
+	document.getElementById('msg').innerHTML="momo";
 	//alert(trigger_value);
 	if((trigger_value==100)&&(stop!=1))
 	{
