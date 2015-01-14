@@ -1,0 +1,35 @@
+/***** Override some CSS for horizontal-iphone ******/
+
+div.iphone-horizontal {
+		height: 435px; width: 810px; 
+		background: url('../img/iphone-horizontal.png') no-repeat center center; 
+		-webkit-background-size: cover;
+		   -moz-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+}
+div.screen-horizontal {
+	height: 320px; width: 568px;
+	position: absolute;
+	top: 56px; left: 119px;
+	overflow: hidden;
+	position: relative;
+}
+
+div.status-horizontal{
+		display: inline-block;
+		height: 100%; width: 20px;
+		border-right: 1px solid black;
+		background: url('../img/status_black-horizontal.png') no-repeat center center; 
+		-webkit-background-size: cover;
+		   -moz-background-size: cover;
+		     -o-background-size: cover;
+		        background-size: cover;
+		top: 0px;
+	}
+
+div.content-horizontal{
+		height: 320px; width: 535px;
+		padding-left: 25px;
+		padding-right: 5px;
+	}

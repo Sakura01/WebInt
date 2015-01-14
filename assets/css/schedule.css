@@ -1,0 +1,330 @@
+/********** Schedule **********/
+
+.content h1{
+	margin-top: 5px;
+	padding-bottom: 5px;
+}
+
+#audio-list{
+	display: none;
+}
+
+.clickable{
+	cursor: pointer;
+}
+
+div.scrollable {
+    display: block;
+    height: 220px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+ul.nice-list{
+  //display: table;
+  list-style: outside none none;
+  padding-left: 0;
+ }
+
+ul.nice-list li{
+	height: 32px;
+	display: block;
+	position: relative;
+	float: none;
+	margin-top: 2px;
+	padding: 5px 10px 5px 10px;
+	border-radius: 4px;
+	color: black;
+}
+
+ul.nice-list .active{
+	background-color: #888;
+	color: white;
+}
+
+
+
+.vertical-text{
+    text-align: center;
+    vertical-align: middle;
+    width: 60px !important;
+    margin: 0px;
+    height: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 10px;
+    white-space: nowrap;
+    transform: rotate(-90deg); 
+}
+
+.blueprint{
+	display: none !important;
+}
+
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    color: #fff;
+}
+
+.btn-success{
+	background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #fff;
+}
+
+.btn-xs{
+	padding-left: 3;
+	padding-right: 3;
+}
+
+.btn-default {
+    background-color: #fff;
+    border-color: #ccc;
+    color: #333;
+}
+
+
+.course-status{
+	
+}
+
+.ringtone-preview{
+	background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    float: right;
+    padding: 0;
+}
+
+.course_backpack, .course_ringtone{
+	padding: 1px;
+}
+
+
+.form-inline .form-control {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+}
+.form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+
+.form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.input-inline{
+	width: auto;
+	display: inline-block;
+}
+
+input.course-day{
+	width: 100px !important;
+}
+
+input.course-time{
+	width: 70px !important;
+}
+
+input.course-name{
+	width: 120px !important;	
+}
+
+.modal-open {
+  overflow: hidden;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+.modal.fade .modal-dialog {
+  -webkit-transition: -webkit-transform .3s ease-out;
+       -o-transition:      -o-transform .3s ease-out;
+          transition:         transform .3s ease-out;
+  -webkit-transform: translate(0, -25%);
+      -ms-transform: translate(0, -25%);
+       -o-transform: translate(0, -25%);
+          transform: translate(0, -25%);
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+       -o-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+	max-height: 280px;
+	overflow-y: scroll;
+
+  position: relative;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+          box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.modal-header {
+  min-height: 16.42857143px;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.modal-body {
+  position: relative;
+  padding: 15px;
+}
+.modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 400px;
+    margin: 85px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear 0s;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+button.close{
+	float: right;
+	padding: 2px;
+}
+
+input.has-error {
+    border-color: #a94442;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+input.has-error.form-control:focus {
+    border-color: #843534;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px #ce8483;
+}
+
+.state-info{
+	bottom: 0;
+	right: 0;
+	display: inline-block;
+	text-align: right;
+}
+
+.need-save{
+	color: #bb4442;
+	font-weight: bold;
+}
