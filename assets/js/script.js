@@ -167,7 +167,7 @@ $(function(){
 	var mint=window.localStorage.getItem('Minute');
 	if(mint)
 	{
-		alert(mins);
+		alert(mint);
 		var mins=mint.split("m");
 		var aft = 0,to_secs = [3600, 60, 1];
 		aft += to_seconds[2] * parseInt(parseInt(mins[0]));
