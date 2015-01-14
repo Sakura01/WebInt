@@ -190,7 +190,7 @@
 	.bubble:after{
 	  content: ' ';
 	  position:absolute;
-	  left:80px;
+	  /*left:80px;*/
 	  right:0;
 	  bottom:-10px;
 	  width:15px;
