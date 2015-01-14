@@ -16,12 +16,18 @@ $('#late').click(function(){
 		}
 		else
 		{
-			if(!minute_bar)
+			if(minute_bar)
 			{
 				window.localStorage.setItem('MinuteB',minute_bar);
 				window.localStorage.setItem('Minute',0);
 				window.localStorage.setItem('Heure',0);
 				
+			}
+			else
+			{
+				window.localStorage.setItem('MinuteB',0);
+				window.localStorage.setItem('Minute',0);
+				window.localStorage.setItem('Heure',0);	
 			}
 		}
 	}
