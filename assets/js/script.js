@@ -171,7 +171,7 @@ $(function(){
 		var aft = 0,to_secs = [3600, 60, 1];
 		aft += to_seconds[2] * parseInt(parseInt(mins[0]));
 		alarm_counter = aft;
-		alert(alarm_counter);
+		alert("mop"+alarm_counter);
 	}
 	if((trigger_value==100)&&(stop!=1))
 	{
@@ -187,14 +187,12 @@ $(function(){
 	if(song_value!=0)
 	{
 		document.getElementById('alarm-ring').src=song_value;
-		//alert(song_value);		
 	}
 	else
 	{
 		if(file_name!=0)
 		{
 			document.getElementById('alarm-ring').src=file_name;
-			//alert(file_name);	
 		}
 	}
 	//Close dialog for setting
@@ -242,7 +240,6 @@ $(function(){
 		}
 
 		if(after < 1){
-			//alert('Please choose a time in the future!');
 			error.fadeIn();
 			return;	
 		}
