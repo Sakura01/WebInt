@@ -166,7 +166,7 @@ $(function(){
 	var minB_load = window.localStorage.getItem('MinuteB');
 	if(min_load)
 	{
-		alert(min_load);
+		alert("Nb"+min_load);
 		document.getElementById('msg').innerHTML="Sleep"+"\t"+min_load+"\t"+"more";
 		window.localStorage.setItem('Minute',"0min");
 	}
@@ -174,7 +174,7 @@ $(function(){
 	{
 		if(minB_load)
 		{
-			alert(minB_load);
+			alert("B"+minB_load);
 			document.getElementById('msg').innerHTML="Sleep"+"\t"+minB_load+"\t"+"more";
 			window.localStorage.setItem('MinuteB',"0min");
 		}
@@ -182,7 +182,7 @@ $(function(){
 		{
 			if(heure_load)
 			{
-				alert(heure_load);
+				alert("H"+heure_load);
 				document.getElementById('msg').innerHTML="Sleep"+"\t"+heure_load+"\t"+"more";
 				window.localStorage.setItem('Heure',"0h");
 			}
