@@ -113,7 +113,7 @@
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 <script src="assets/js/menu.js"></script>
 <script Language="JavaScript">
-var error = $('#error').parent();
+
 $('#test').click(function() {
 	
 	var user = document.getElementById("usernamesignup").value;
@@ -121,7 +121,7 @@ $('#test').click(function() {
 	var pass = document.getElementById("passwordsignup").value;
 	var result = emailT.split('@')[0];
 	
-	alert("merde");
+
 	if(result.indexOf(".") != -1)
 	
 		window.localStorage.setItem('distinction',0);
@@ -138,9 +138,7 @@ $('#test').click(function() {
 
 });
 
-	error.click(function(){
-			error.fadeOut();
-	});
+
 
 </script>
 
