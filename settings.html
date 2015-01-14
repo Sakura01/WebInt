@@ -1,0 +1,143 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+    <meta name="apple-mobile-web-app-capable" content="yes">  
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">  
+
+	<link href="assets/css/settings.css" rel="stylesheet" />
+	<!-- Montserrat Sans -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400, 700' rel='stylesheet' type='text/css'>   
+</head>
+<body>
+
+	<div class="background">
+		<div class="iphone">
+			<div class="screen">
+				<div class="menu">
+					<ul>
+						<li>
+							<button class="shiny" id="buttonHome" >
+									<img src="assets/img/home.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonSettings" >
+									<img src="assets/img/settings.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonSteps" >
+									<img src="assets/img/steps.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonSchedule" >
+								<img src="assets/img/schedule.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonNotification"> 
+								<img src="assets/img/notification.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonDevice">
+								<img src="assets/img/devices.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonQuit">
+								<img src="assets/img/quit.png"/>
+							</button>  
+						</li>
+					</ul>
+				</div>
+				<div class="status"></div>
+				<div class="content ">
+					<div class="button">
+						<img src="assets/img/menu.png"/>
+					</div>
+					<div class="alarm-triggered">
+						<fieldset>
+							<legend>
+									Trigger
+							</legend>
+							<div id="result">
+							</div>
+							<div>
+								<input type="radio" name="trigger-choice" id="trigger-choice-0" class="radio" value="snooze" />
+								<label for="trigger-choice-0" id="test">
+									Snooze
+								</label>
+							</div>
+							<div>
+								<input type="radio" name="trigger-choice" id="trigger-choice-1" class="radio" value="1h"/>
+								<label for="trigger-choice-1" id="test">
+									1h
+								</label>
+							</div>
+							<div>
+								<input type="radio" name="trigger-choice" id="trigger-choice-2" class="radio" value="1min" />
+								<label for="trigger-choice-2">
+									1min
+								</label>
+							</div>
+							<div>
+								<input type="radio" name="trigger-choice" id="trigger-choice-3" class="radio" value="1s" />
+								<label for="trigger-choice-3">
+									1s
+								</label>
+							</div>
+						</fieldset>
+					</div>
+					<div class="alarm-ringtones">
+						<fieldset>
+							<legend>
+									Ringtones
+							</legend>
+							<div>
+								<input type="radio" name="radio-choice" id="radio-choice-4" class="radio" value="Avicii"/>
+								<label for="radio-choice-4" id="test">
+									Wake me up
+								</label>
+							</div>
+							<div>
+								<input type="radio" name="radio-choice" id="radio-choice-5" class="radio" value="Eminem"/>
+								<label for="radio-choice-5">
+									Loose your self
+								</label>
+							</div>
+							<div class="custom_file_upload">
+								<input type="text" class="file" name="file_info" id="infoFile">
+								<div class="file_upload">
+									<input type="file" id="file_upload" name="file_upload">
+								</div>
+							</div>
+						</fieldset>
+					</div>
+					<div class="overlay">
+							<div id="error">
+								<h2>Error format file!</h2>
+								<div class="button-holder">
+									<a class="button blue">Close</a>
+								</div>
+
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- JavaScript Includes -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+		<script src="assets/js/menu.js"></script>
+		<script src="assets/js/handle.js"></script>
+</body>
+</html>

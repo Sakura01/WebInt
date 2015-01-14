@@ -1,0 +1,125 @@
+<!DOCTYPE html> <!-- HTML5 tag -->
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+    <meta name="apple-mobile-web-app-capable" content="yes">  
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">  
+
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<link href="assets/css/style1.css" rel="stylesheet" />
+	
+	<!-- Montserrat Sans -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400, 700' rel='stylesheet' type='text/css'>   
+	
+	<script>
+		function validate()
+		{
+		var chks = document.getElementsByName('smart[]');
+		var checkCount = 0;
+		for (var i = 0; i < chks.length; i++)
+		{
+		if (chks[i].checked)
+		{
+		checkCount++;
+		}
+		}
+		if (checkCount < 1)
+		{
+		alert("Please select at least one.");
+		return false;
+		}
+		return true;
+		}
+		</script>
+</head>
+<body>
+
+	<div class="background">
+		<div class="circle"></div>
+		<div class="iphone">
+			<div class="screen">
+				<div class="menu">
+					<ul>
+						<li>
+							<button class="shiny" id="buttonHome" >
+									<img src="assets/img/home.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonSettings" >
+									<img src="assets/img/settings.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonSchedule" onclick="loadContent(2)">
+								<img src="assets/img/schedule.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonNotification" onclick="loadContent(3)"> 
+								<img src="assets/img/notification.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonDevice" onclick="loadContent(4)">
+								<img src="assets/img/devices.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonQuit" onclick="loadContent(5)">
+								<img src="assets/img/quit.png"/>
+							</button>  
+						</li>
+					</ul>
+				</div>
+				<div class="status"></div>
+				<div class="content" id="tologin">
+				
+					<div class="button">
+						<img src="assets/img/menu.png"/>
+					</div>
+					<div id="make_smarter" >
+					<form name="form1" action="#" onSubmit="return validate()">
+					<h1>Make it smarter</h1>
+					<input type="checkbox" name="smart[]" value="gps" id="gps">Use GPS to detect when I arrive <br>
+					<input type="checkbox" name="smart[]" value="logs" id="logs">Use logs to auto-adjust prepare time <br>
+					<input type="checkbox" name="smart[]" value="notify" id="notify">Push-up notifications when adjusting <br>
+					<br>
+					
+					<p class="yes button">
+					<input type="submit" value="OK" name="submit"/>
+					</p>
+					<p class="non button">
+					<input type="button" value="SKIP" name="skip">
+					</p>
+					
+					
+					<p class="change_link">  
+						<em>step1 ></em> 
+						<em id="steps"> step2 </em>
+						<em> > step3 </em>
+						
+					</p>
+					
+					</form>
+					
+					</div>
+				
+			
+			</div>
+		</div>
+	</div>
+		<!-- JavaScript Includes -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+		<script src="assets/js/menu.js"></script>
+</body>
+
+
+</html>

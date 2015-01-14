@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style1.css" />
+
+</head>
+
+<body>			
+	
+	<div class="iphone">
+		<div class="screen">
+			<div class="menu">
+					<ul>
+						<li>
+							<button class="shiny" id="buttonHome" >
+									<img src="assets/img/home.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonSettings" >
+									<img src="assets/img/settings.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonSteps" >
+									<img src="assets/img/steps.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonSchedule" onclick="loadContent(2)">
+								<img src="assets/img/schedule.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonNotification" onclick="loadContent(3)"> 
+								<img src="assets/img/notification.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonDevice" onclick="loadContent(4)">
+								<img src="assets/img/devices.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonQuit" onclick="loadContent(5)">
+								<img src="assets/img/quit.png"/>
+							</button>  
+						</li>
+					</ul>
+				</div>
+				<div class="status"></div>	
+				
+				<div class="content">
+					
+					<div id="tologin" >
+						<div class="button">
+						<img src="assets/img/menu.png"/>
+						</div>
+						<form  action="" autocomplete="on" "> 
+							<h1>Login</h1>
+							<p> 
+								<label for="password" class="youpasswd"> Your password </label></br>
+								<input id="password" name="password" type="password" placeholder="eg. X8df!90EO" /> 
+							</p>
+							<p class="keeplogin"> 
+								<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+								<label for="loginkeeping">Stay connected</label>
+							</p>
+							<p class="login button"> 
+								<input type="button" id="test" name="valid_password" value="Login" /> 
+							</p>
+							<p class="change_link">
+								Haven't registered yet?
+								<a href="register.html#toregister" class="to_register">Register</a>
+							</p>
+							<div class="overlay">
+								<div id="error">
+									<h2>Wrong password</h2>
+									<div class="button-holder">
+									<a class="button blue">Close</a>
+									</div>
+
+								</div>
+							</div>
+						</form>
+					</div>
+							
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<script src="assets/js/menu.js"></script>
+<script Language="JavaScript">
+
+var error = $('#error').parent();
+$('#test').click(function() {
+			var pass_O = "00000";
+			var pass = document.getElementById("password").value;
+			var compare=pass.localeCompare(pass_O);
+			if (compare!=0)
+			{
+				error.fadeIn();
+				//window.alert("R");
+			}
+				else
+			{
+				
+				//document.innerHTML='<object type="text/html" data="welcome.html" ></object>';
+				window.location='index.html';
+			}
+
+		});
+error.click(function(){
+			error.fadeOut();
+		});
+</script>
+</body>
+</html>

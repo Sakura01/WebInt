@@ -1,0 +1,118 @@
+<!DOCTYPE html> <!-- HTML5 tag -->
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
+    <meta name="apple-mobile-web-app-capable" content="yes">  
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">  
+
+	<link href="assets/css/style.css" rel="stylesheet" />
+	<link href="assets/css/style1.css" rel="stylesheet" />
+
+	<!-- Montserrat Sans -->
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400, 700' rel='stylesheet' type='text/css'>   
+
+		<script>
+		function device()
+		{
+			document.getElementById("div1").style.display="block";
+		}
+		
+		function checkListBoxSize(){
+		oSelect=document.getElementById("devices");
+		var count=0;
+		for(var i=0;i<oSelect.options.length;i++){
+		if(oSelect.options[i].selected)
+		count++;
+		}
+		if(count<1){
+		alert("Must select at least one item");
+		return false;
+		}
+		return true;
+		}
+		</script>
+</head>
+<body>
+
+	<div class="background">
+		<div class="circle"></div>
+		<div class="iphone">
+			<div class="screen">
+				<div class="menu">
+					<ul>
+						<li>
+							<button class="shiny" id="buttonHome" >
+									<img src="assets/img/home.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonSettings" >
+									<img src="assets/img/settings.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonSchedule" onclick="loadContent(2)">
+								<img src="assets/img/schedule.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonNotification" onclick="loadContent(3)"> 
+								<img src="assets/img/notification.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonDevice" onclick="loadContent(4)">
+								<img src="assets/img/devices.png"/>
+							</button> 
+						</li>
+						<li>
+							<button class="shiny" id="buttonQuit" onclick="loadContent(5)">
+								<img src="assets/img/quit.png"/>
+							</button>  
+						</li>
+					</ul>
+				</div>
+				<div class="status"></div>
+				<div class="content ">
+					<div class="button">
+						<img src="assets/img/menu.png"/>
+					</div>
+					<div id="make_smarter" style="position:absolute;top:80px;">
+					<form name="form1" action="#" onSubmit="return checkListBoxSize()">
+					<h1>Synchronize with devices</h1>
+					<input type="button" class="yes button"name="devices" value="Click to find devices" onclick="device()"><br><br>
+					<div id="div1" style="display:none">
+					<b>5 devices found</b><br><br>
+					<select multiple id="devices" style="width:100%;">
+					  <option>Device 1</option>
+					  <option>Device 2</option>
+					  <option>Device 3</option>
+					  <option>Device 4</option>
+					  <option>Device 5</option>
+					</select>
+					</div><br><br>
+					<p class="yes button">
+					<input type="submit" value="OK" name="submit"/>
+					</p>
+					<p class="non button">
+					<input type="button" value="BACK" name="back">
+					</p>
+					</form>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+		<!-- JavaScript Includes -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+		<script src="assets/js/script.js"></script>
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+		<script src="assets/js/menu.js"></script>
+</body>
+</html>
