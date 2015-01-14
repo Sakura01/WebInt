@@ -117,7 +117,7 @@ var error = $('#error').parent();
 $('#test').click(function() {
 		alert("merde");
 	var user = document.getElementById("usernamesignup").value;
-	var emailT = document.getElementById("emailsignup").value;
+	var email = document.getElementById("emailsignup").value;
 	var pass = document.getElementById("passwordsignup").value;
 	var result = emailT.split('@')[0];
 	if(result.indexOf(".") != -1)
@@ -127,15 +127,6 @@ $('#test').click(function() {
 		
 		window.localStorage.setItem('distinction',1);
 	
-	var x = document.forms["myForm"]["emailsignup"].value;
-    	var atpos = x.indexOf("@");
-    	var dotpos = x.lastIndexOf(".");
-    	if (user || pas || atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length ||) {
-    		error.fadeIn();	
-    	}
-    	else
-
-		 location.href='new_tell_me_more.html';
 
 });
 
