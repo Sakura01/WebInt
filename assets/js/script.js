@@ -174,8 +174,7 @@ $(function(){
 		aft=to_secs[2]*parseInt(mint[0]);
 		//aft += to_seconds[2] * mins[0];
 		//alert("mol"+to_seconds[2]);
-		//alarm_counter = aft;
-		alert("mop");
+		alarm_counter = aft;
 	}
 	if((trigger_value==100)&&(stop!=1))
 	{
