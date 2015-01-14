@@ -171,9 +171,9 @@ $(function(){
 		var mins=mint.split("m");
 		var aft = 0,to_secs = [3600, 60, 1];
 		alert(mint[0]);
-		aft += to_seconds[2] * mins[0];
-		alert("mol"+aft);
-		alarm_counter = aft;
+		//aft += to_seconds[2] * mins[0];
+		alert("mol"+to_seconds[2]);
+		//alarm_counter = aft;
 		alert("mop");
 	}
 	if((trigger_value==100)&&(stop!=1))
