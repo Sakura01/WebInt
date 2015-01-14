@@ -149,6 +149,7 @@ $(function(){
 			var state=trigger_value.localCompare("on");
 			if(state==0)
 			{
+				alert("stop?"+stop);
 				if(stop==0)
 				//Repeat each 5s
 				{
