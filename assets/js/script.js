@@ -141,12 +141,12 @@ $(function(){
 	$('#switch-theme').click(function(){
 		clock.toggleClass('light dark');
 	});
-	var trigger_value;
+	var trigger_value,stop=0;
 	//slide stop
 	$('#alarm-stop').click(function(){
 		$('#alarm-ring')[0].pause();
 		$('#alarm-ring')[0].currentTime = 0;
-		window.localStorage.setItem('trigger',-100);
+		stop=1;
 	});
 	// Handle setting and clearing alamrs
 
@@ -164,7 +164,7 @@ $(function(){
 	
 	document.getElementById('msg').value="momo";
 	//alert(trigger_value);
-	if(trigger_value==100)
+	if((trigger_value==100)&&(stop!=1))
 	{
 		//Repeat each 5s
 		window.setInterval(function(){
