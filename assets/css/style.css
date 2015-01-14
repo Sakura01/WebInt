@@ -174,8 +174,9 @@
 	{
 		font-size: 15px;
 	}
+	/*relative*/
 	.bubble{
-	  position:relative;
+	  position:absolute;
 	  display: inline-block;
 	  top:10px;
 	  padding: 20px;
