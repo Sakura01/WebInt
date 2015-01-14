@@ -18,28 +18,6 @@ var error = $('#error').parent();
 
 		$('input[name="trigger-choice"]').change(function() {
 			var triggered = this.value;
-			var min_load = window.localStorage.getItem('Minute');
-			var heure_load = window.localStorage.getItem('Heure');
-			var minB_load = window.localStorage.getItem('MinuteB');
-			if(!triggered)
-			{
-				if(min_load==0)
-				{
-					if(minB_load==0)
-					{
-						triggered =heure_load;
-					}
-					else
-					{
-						triggered =minB_load;
-					}
-				}
-
-				else
-				{
-					triggered = min_load;
-				}
-			}
 			var oneHour=triggered.localeCompare("1h");
 			var oneMin=triggered.localeCompare("1min");
 			var oneSec=triggered.localeCompare("1s");
