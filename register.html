@@ -77,7 +77,7 @@
 					</p>
 					
 					<p class="signin button"> 
-						<input type="button" id="test" value="Register"/> 
+						<input type="button" id="boutton" value="Register"/> 
 					</p>
 					<div>
 						<em id="steps">step1</em> 
@@ -114,14 +114,10 @@
 <script src="assets/js/menu.js"></script>
 <script Language="JavaScript">
 
-$('#test').click(function() {
+$('#boutton').click(function() {
 	
-	var user = document.getElementById("usernamesignup").value;
-	var email = document.getElementById("emailsignup").value;
-	var pass = document.getElementById("passwordsignup").value;
+	var emailT = document.getElementById("emailsignup").value;
 	var result = emailT.split('@')[0];
-	
-
 	if(result.indexOf(".") != -1)
 	
 		window.localStorage.setItem('distinction',0);
@@ -129,11 +125,7 @@ $('#test').click(function() {
 		
 		window.localStorage.setItem('distinction',1);
 
-	alert("merde!!!!");
-    
-   
-
-		 /*location.href='new_tell_me_more.html';*/
+	location.href='new_tell_me_more.html';
 
 
 });
