@@ -182,7 +182,7 @@ $(function(){
 		alarm_counter = aft;
 		alert(mint);
 	}
-	else if(mintB)
+	if(mintB)
 	{
 		var mins=mintB.split("m");
 		alert(mintB);
@@ -191,7 +191,7 @@ $(function(){
 		alarm_counter = aft;
 		alert(mintB);
 	}
-	else
+	if(hou)
 	{
 		var hous=hou.split("h");
 		alert(hou);
