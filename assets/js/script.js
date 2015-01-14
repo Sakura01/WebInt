@@ -171,7 +171,7 @@ $(function(){
 		var aft = 0,to_secs = [3600, 60, 1];
 		aft += to_seconds[2] * parseInt(parseInt(mins[0]));
 		alarm_counter = aft;
-		alert("mop"+alarm_counter);
+		alert("mop");
 	}
 	if((trigger_value==100)&&(stop!=1))
 	{
