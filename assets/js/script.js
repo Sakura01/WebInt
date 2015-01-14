@@ -158,8 +158,8 @@ $(function(){
 	});
 	
 	//get trigger
-	trigger_value = window.localStorage.getItem('trigger');
-	alarm_counter=trigger_value;
+	//trigger_value = window.localStorage.getItem('trigger');
+	//alarm_counter=trigger_value;
 	//get msg
 	var whatsup=window.localStorage.getItem('MSG');
 	document.getElementById('msg').innerHTML=whatsup;
