@@ -126,7 +126,17 @@ $('#test').click(function() {
 	else
 		
 		window.localStorage.setItem('distinction',1);
-	alert("merde");
+
+	
+    	var atpos = email.indexOf("@");
+    	var dotpos = email.lastIndexOf(".");
+    	if (user || pas ) {
+    		error.fadeIn();	
+    	}
+    	else
+
+		 location.href='new_tell_me_more.html';
+
 
 });
 
