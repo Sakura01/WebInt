@@ -14,26 +14,7 @@
 	<!-- Montserrat Sans -->
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400, 700' rel='stylesheet' type='text/css'>   
 	
-	<script>
-		function validate()
-		{
-		var chks = document.getElementsByName('smart[]');
-		var checkCount = 0;
-		for (var i = 0; i < chks.length; i++)
-		{
-		if (chks[i].checked)
-		{
-		checkCount++;
-		}
-		}
-		if (checkCount < 1)
-		{
-		alert("Please select at least one.");
-		return false;
-		}
-		return true;
-		}
-		</script>
+	
 </head>
 <body>
 
@@ -82,7 +63,7 @@
 						<img src="assets/img/menu.png"/>
 					</div>
 					<div id="make_smarter" >
-					<form name="form1" action="#" onSubmit="return validate()">
+					<form name="form1" action="#" >
 					<h1>Make it smarter</h1>
 					<input type="checkbox" name="smart[]" value="gps" id="gps">Use GPS to detect when I arrive <br>
 					<input type="checkbox" name="smart[]" value="logs" id="logs">Use logs to auto-adjust prepare time <br>
