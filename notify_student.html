@@ -100,8 +100,8 @@
 			//var minB = "late:"+heure_load
 			if(heure_load)
 			{
-				document.getElementById("comment").value = "Late:"+"\t"+heure_load;
-				var message="late:"+heure_load;
+				document.getElementById("comment").value ="Late"+"\t"+":"+"\t"+heure_load;
+				var message="Late"+"\t"+":"+"\t"+heure_load;
 				window.localStorage.setItem('MSG',message);
 			}
 			//window.localStorage.setItem('Message',	)
@@ -115,16 +115,16 @@
 		}
 		else
 		{
-			document.getElementById("comment").value =  "Late:"+"\t"+minB_load;
-			var message="late:"+minB_load;
+			document.getElementById("comment").value = "Late"+"\t"+":"+"\t"+minB_load;
+			var message="Late"+"\t"+":"+"\t"+minB_load;
 			window.localStorage.setItem('MSG',message);					
 			
 		}
 	}
 	else
 	{
-		document.getElementById("comment").value = "Late:"+"\t"+min_load;
-		var message="late:"+min_load;
+		document.getElementById("comment").value = "Late"+"\t"+":"+"\t"+min_load;
+		var message="Late"+"\t"+":"+"\t"+min_load;
 		window.localStorage.setItem('MSG',message);
 	}
 
