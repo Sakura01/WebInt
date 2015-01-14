@@ -18,38 +18,15 @@ var error = $('#error').parent();
 
 		$('input[name="trigger-choice"]').change(function() {
 			var triggered = this.value;
-			var oneHour=triggered.localeCompare("1h");
-			var oneMin=triggered.localeCompare("1min");
-			var oneSec=triggered.localeCompare("1s");
-			var after = 0,to_seconds = [3600, 60, 1];
 			var snooze=triggered.localeCompare("snooze");
 			//alarm.addClass('active');
 			//Demander au prof
 			if(snooze==0)
 			{
-				alarm_counter=100;
+				alarm_counter=-400;
 				
 			}
-			if (oneHour==0)
-			{
-				//play alarm each 3600s
-				after += to_seconds[0] * 1;
-				alarm_counter = after;
-			}
-			if (oneMin==0)
-			{
-				//play alarm each 60s
-				after += to_seconds[1] * 1;
-				alarm_counter = after;
-			}
-			if(oneSec==0)
-			{
-				//play alarm each 1s
-				after += to_seconds[2] * 1;
-				alarm_counter = after;
-			}
-			//window.localStorage.setItem('name to get and set value',your variable);
-			//window.localStorage.setItem('trigger',alarm_counter);
+			window.localStorage.setItem('trigger',alarm_counter);
 		});	
 			//Browse for ringtone
 		$( "#file_upload" ).change(function() {
