@@ -10,7 +10,7 @@ $(function(){
 		error = $('#error').parent(),
 		time_is_up = $('#time-is-up').parent();
 
-	// This will hold the number of seconds left
+	//  hold the number of seconds left
 	// until the alarm should go off
 	var alarm_counter = -1;
 
@@ -80,7 +80,7 @@ $(function(){
 		digits.s2.attr('class', digit_to_name[now[5]]);
 
 		// The library returns Sunday as the first day of the week.
-		// Stupid, I know. Lets shift all the days one position down, 
+		//  shift all the days one position down, 
 		// and make Sunday last
 
 		var dow = now[6];
@@ -112,8 +112,7 @@ $(function(){
 		else if(alarm_counter == 0){
 
 			time_is_up.fadeIn();
-			// Play the alarm sound. This will fail
-			// in browsers which don't support HTML5 audio
+			// Play the alarm sound. 
 			setTimeout(function() {time_is_up.fadeOut();},2000);
 			try{
 				//enableRingtone();
@@ -186,6 +185,7 @@ $(function(){
 	else if(mintB)
 	{
 		var mins=mintB.split("m");
+		alert(mintB);
 		var aft = 0,to_secs = [3600, 60, 1];
 		aft=to_secs[2]*parseInt(mins[0]);
 		alarm_counter = aft;
@@ -194,6 +194,7 @@ $(function(){
 	else
 	{
 		var hous=hou.split("h");
+		alert(hou);
 		var aft = 0,to_secs = [3600, 60, 1];
 		aft=to_secs[2]*parseInt(hous[0]);
 		alarm_counter = aft;
