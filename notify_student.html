@@ -98,8 +98,15 @@
 		if(!minB_load)
 		{
 			//var minB = "late:"+heure_load
-			document.getElementById("comment").value = "late:"+heure_load;
-			//window.localStorage.setItem('Message',	)				
+			if(heure_load)
+			{
+				document.getElementById("comment").value = "late:"+heure_load;
+			}
+			//window.localStorage.setItem('Message',	)
+			else
+			{
+				document.getElementById("comment").value = ":p";	
+			}
 			
 		}
 		else
