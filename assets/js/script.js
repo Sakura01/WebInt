@@ -141,13 +141,20 @@ $(function(){
 		clock.toggleClass('light dark');
 	});
 	//Snooze
-	var trigger_value,stop=0;
-	if((trigger_value==100)&&(stop!=1))
+	var stop;
+	var trigger_value=window.localStorage.getItem('trigger');
+	if(trigger_value)
 	{
-		//Repeat each 5s
-		window.setInterval(function(){
-			alarm_counter = 0;
-		}, 5000);
+		if(trigger_value==-400)
+		{
+			if(stop==0)
+			{
+				//Repeat each 5s
+				window.setInterval(function(){
+					alarm_counter = 0;
+				}, 5000);	
+			}
+		}
 	}
 	//slide stop
 	$('#alarm-stop').click(function(){
