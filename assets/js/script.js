@@ -146,10 +146,7 @@ $(function(){
 		$('#alarm-ring')[0].pause();
 		$('#alarm-ring')[0].currentTime = 0;
 		var trigger_value = window.localStorage.getItem('trigger');
-		if(trigger_value==100)
-		{
-			trigger_value=200;	
-		}
+		window.localStorage.setItem('trigger',0);	
 	});
 	// Handle setting and clearing alamrs
 
