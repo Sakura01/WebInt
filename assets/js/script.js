@@ -163,7 +163,9 @@ $(function(){
 	//get msg
 	var whatsup=window.localStorage.getItem('MSG');
 	document.getElementById('msg').innerHTML=whatsup;
-
+	//get trigger from notifs
+	var mint=window.localStorage.getItem('Minute');
+	alert(mint);
 	if((trigger_value==100)&&(stop!=1))
 	{
 		//Repeat each 5s
