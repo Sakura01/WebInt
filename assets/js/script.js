@@ -149,25 +149,18 @@ $(function(){
 			var state=trigger_value.localCompare("on");
 			if(state==0)
 			{
-				alert("stop?"+stop);
-				if(stop==0)
 				//Repeat each 5s
-				{
-					window.setInterval(function(){
-					alarm_counter = 0;
-					}, 5000);
-				}
-			}
-			else
-			{
-				stop=1;
+	
+				window.setInterval(function(){
+				alarm_counter = 0;
+				}, 5000);
 			}
 	}
 	//slide stop
 	$('#alarm-stop').click(function(){
 		$('#alarm-ring')[0].pause();
 		$('#alarm-ring')[0].currentTime = 0;
-		stop=1;
+		window.localStorage.setItem('trigger','off');
 	});
 	// Handle setting and clearing alamrs
 
