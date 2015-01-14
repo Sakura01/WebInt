@@ -145,7 +145,8 @@ $(function(){
 	$('#alarm-stop').click(function(){
 		$('#alarm-ring')[0].pause();
 		$('#alarm-ring')[0].currentTime = 0;
-		window.localStorage.setItem('trigger',"-1");	
+		window.localStorage.setItem('trigger',"-1");
+		alert(alarm_counter);
 	});
 	// Handle setting and clearing alamrs
 
@@ -160,7 +161,7 @@ $(function(){
 	var trigger_value = window.localStorage.getItem('trigger');
 	alarm_counter=trigger_value;
 	//get msg
-	alert(alarm_counter);
+	
 	//document.getElementById('msg').value=msg_value;
 	//alert(trigger_value);
 	if(trigger_value==100)
