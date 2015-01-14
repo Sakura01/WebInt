@@ -93,9 +93,9 @@
 	min_load = window.localStorage.getItem('Minute');
 	heure_load = window.localStorage.getItem('Heure');
 	minB_load = window.localStorage.getItem('MinuteB');
-	if(min_load==0)
+	if(min_load=="0min")
 	{
-		if(minB_load==0)
+		if(minB_load=="0h")
 		{
 			//var minB = "late:"+heure_load
 			document.getElementById("comment").value = "late:"+heure_load;
