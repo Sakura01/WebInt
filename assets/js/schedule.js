@@ -40,7 +40,9 @@ function loadData(){
 	schedule.forEach(function(entry) {
 	    //Add a row corresponding to the item
 	    addRow(function(interceptedElement){
-	    	el = $(interceptedElement)
+	    	var el = $(interceptedElement)
+	    	var debug = entry["id"]
+	    	el.attr('itemid', entry["id"])
 	    	el.find('.course-name').val(entry["name"])
 	    	el.find('.course-time').val(entry["time"])
 	    	el.find('.course-day').val(entry["day"])
@@ -56,8 +58,8 @@ function genID(){
 
 // Find item in memory
 function findItemById(id) {
-	for(var i=0; i<= schedule.length; i++){
-		if (schedule[i].id === id) {
+	for(var i=0; i< schedule.length; i++){
+		if (String(schedule[i].id) === String(id)) {
 		  return schedule[i];
 		}
 	}
@@ -74,42 +76,78 @@ function findItemById(id) {
 // http://getbootstrap.com/javascript/#modals
 $('#modal-backpack').on('show.bs.modal', function (event) {
 	var button = $(event.relatedTarget) 
-	var course = button.parents('tr').find('.course-name').val() 
+	var scheduledItem = button.parents('tr')
+	var itemid = scheduledItem.attr('itemid')
+	var course = scheduledItem.find('.course-name').val() 
 
 	var modal = $(this)
 	modal.find('.modal-title').text('Backpack for course ' + course)
+	//Give the modal the itemid of the called attribute
+	modal.find('#items-list').attr('itemid', itemid)
+	var inMem = findItemById(itemid)
+	if (inMem["backpack"]){
+		for(var i=0; i < inMem["backpack"].length; i++){
+			addBackpackItem(function(intercepted){
+				var text = $(intercepted).find('.course-backpack-item')
+				text.val(inMem["backpack"][i])
+			})
+		}
+	}
 })
 
 $('#modal-ringtone').on('show.bs.modal', function (event) {
 	var button = $(event.relatedTarget) 
-	var course = button.parents('tr').find('.course-name').val() 
+	var scheduledItem = button.parents('tr')
+	var itemid = scheduledItem.ettr('itemid')
+	var course = scheduledItem.find('.course-name').val() 
 
 	var modal = $(this)
 	modal.find('.modal-title').text('Ringtone for course ' + course)
+
+	//Give the modal the itemid of the called attribute
+	modal.find('#ringtone-selector').attr('itemid', itemid)
 })
 
 
 function addRow(interceptor){
-	var elem = document.getElementById('row-blueprint');
-	last_row = document.getElementById('add_row')
-	var dup = elem.cloneNode(true)
-	dup.className = ''
-	last_row.parentNode.insertBefore(dup, last_row)
-	dirty()
+	var elem = $('#row-blueprint');
+	var list = $('#scheduled-items')
+	var dup = elem.clone(true)
+	var id = genID()
+	dup.removeAttr('id')
+	dup.toggleClass("blueprint", false)
+	dup.toggleClass('scheduled-item', true)
+	//IMPORTANT : attach an itemid to the newly created row, and create in memory
+	dup.attr('itemid', id)
+	list.append(dup)
+
 	if (interceptor){
 		interceptor(dup)
+	} else{
+		dirty()
+		schedule.push({id: id, notifications: false })
 	}
 }
 
+function removeRow(what){
+	var id = $(what).parents('tr').attr('itemid')
+	var itemInMem = findItemById(id)
+	schedule.splice(schedule.indexOf(itemInMem))
+	removeTr(what)
+	store()
+}
+
 function addBackpackItem(interceptor){
-	var elem = document.getElementById('backpack-item-blueprint');
-	last_elem = document.getElementById('add_backpack-item')
-	var dup = elem.cloneNode(true)
-	dup.className = ''
-	last_elem.parentNode.insertBefore(dup, last_elem)
-	dirty()
+	var elem = $('#backpack-item-blueprint');
+	last_elem = $('#add_backpack-item')
+	var dup = elem.clone(true)
+	dup.toggleClass('blueprint', false)
+	dup.removeAttr('id')
+	dup.insertBefore(last_elem)
 	if (interceptor){
 		interceptor(dup)
+	}else{
+		dirty()
 	}
 }
 
@@ -117,8 +155,8 @@ function removeLi(what){
 	removeElement(what, 'LI')
 }
 
-function removeTd(what){
-	removeElement(what, 'TD')
+function removeTr(what){
+	removeElement(what, 'TR')
 }
 
 function removeElement(what, tag_name){
@@ -182,7 +220,7 @@ function validate(){
 
 		// Only need to check date ?
 		var dates = $(this).find(".course-time")
-		var TIME_REGEXP = /\d{1,2}H\d{1,2}/
+		var TIME_REGEXP = /\d{1,2}H\d{0,2}/
 		dates.each(function(){
 			if (!$(this).val().match(TIME_REGEXP)){
 				$(this).toggleClass("has-error", true)
@@ -197,25 +235,53 @@ function validate(){
 	}
 }
 
+// Save to local Storage !
 function saveSchedule(){
+	saveBaseParams()
+	store()
+
 	$("form").submit()
 	return true
 }
 
+/* 	Save information from the main window : Day, Time, course name in the memory
+	Should be called ONLY after validating params */
+function saveBaseParams(){
+	var items = $("#scheduled-items tr")
+
+	items.each(function(){
+		var itemid = $(this).attr("itemid")
+		var storedItem = findItemById(itemid)
+		
+		// Day of the Week
+		var day = $(this).find(".course-day")
+		storedItem["day"] = day.val();
+
+		// Course name
+		storedItem["name"] = $(this).find(".course-name").val()
+
+		// Time (remember it has )
+		storedItem["time"] = $(this).find(".course-time").val()
+
+	})
+
+}
 
 
-// backpack modal - save
+
+/* backpack modal - save */
 function saveBackpack(){
 	var list = $("#items-list")
 	var id = list.attr("itemid")
 	var item = findItemById(id)
 	item["backpack"] = []
-	list.find("li input.course-backpack-item").each(function(){
+	list.find(".course-backpack-item").each(function(){
 		var itemName = $(this).val()
-		if (itemName){
-			item.backpack.push()
+		if (itemName && itemName !== ""){
+			item["backpack"].push(itemName)
 		}
 	})
+	store()
 }
 
 //Save selected ringtone

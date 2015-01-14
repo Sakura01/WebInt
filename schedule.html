@@ -59,29 +59,32 @@
 							<table class="table table-bordered table-striped" id="courses-list" onload="loadModals()">
 								<tbody class="blueprint">
 									<tr id="row-blueprint" class="form-group">
-										<td><select class="form-control course-day">
-											<option>Monday</option>
-											<option>Tuesday</option>
-											<option>Wednesday</option>
-											<option>Thursday</option>
-											<option>Friday</option>
-											<option>Saturday</option>
-											<option>Sunday</option>
+										<td><select class="form-control course-day" onChange="dirty()">
+											<option value="monday">Monday</option>
+											<option value="tuesday">Tuesday</option>
+											<option value="wednesday">Wednesday</option>
+											<option value="thursday">Thursday</option>
+											<option value="friday">Friday</option>
+											<option value="saturday">Saturday</option>
+											<option value="sunday">Sunday</option>
 										</td>
-										<td><input class="form-control course-name" type="text" placeholder="Course name"></td>
-										<td><input class="form-control course-time" type="time" placeholder="8H30"></td>
+										<td><input class="form-control course-name" type="text" placeholder="Course name" onChange="dirty()"></td>
+										<td><input class="form-control course-time" type="time" placeholder="8H30" onChange="dirty()"></td>
 										<td><button type="button" class="btn btn-default course_backpack" 
 											 data-toggle="modal" data-target="#modal-backpack"><img src="assets/img/backpack.jpg" alt="backpack"></button></td>
 										<td><button type="button" class="btn btn-default course_ringtone"
 											  data-toggle="modal" data-target="#modal-ringtone"><img src="assets/img/ringtone.png" alt="ringtone"></button></td>
 										<td>
 											<button type="button" class="btn btn-default course_status">No msg</button>
-											<button type="button" class="btn btn-danger btn-xs" onclick="removeElement(this, 'TR')">X</button>
+											<button type="button" class="btn btn-danger btn-xs" onclick="removeRow(this)">X</button>
 										</td>
 									</tr>
 								</tbody>
 
 								<tbody id="scheduled-items">
+								</tbody>
+
+								<tbody>
 									<tr id="add_row">
 										<td colspan="6" class="more"><button type="button" class="btn btn-default" onclick="addRow()">Add something else</button></td>
 									</tr>
@@ -106,7 +109,7 @@
 								<div class="modal-body">
 									<ul class="nice-list" id="items-list">
 										<li class="blueprint" id="backpack-item-blueprint">
-											<input type="text" class="form-control input-inline" placeholder="Name of item to bring">
+											<input type="text" class="form-control input-inline course-backpack-item" placeholder="Name of item to bring">
 											<button type="button" class="btn btn-danger" onclick="removeLi(this)">Remove</button>
 										</li>
 
@@ -116,7 +119,7 @@
 									</ul>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+									<button type="button" onclick="saveBackpack()" class="btn btn-default" data-dismiss="modal">Save</button>
 								</div>
 							</div>
 						</div>
