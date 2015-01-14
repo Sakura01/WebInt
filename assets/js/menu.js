@@ -83,7 +83,7 @@
 		closeMenu();
 		var who=window.localStorage.getItem('distinction');
 			alert(who);
-		if(who==0)
+		if(who==1)
 		{
 		
 			window.location = "notify_teacher.html";	
