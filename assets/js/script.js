@@ -184,7 +184,7 @@ $(function(){
 				{
 					var mins=mintB.split("m");
 					var aft = 0,to_secs = [3600, 60, 1];
-					aft=to_secs[2]*parseInt(mins[0]);
+					aft=to_secs[1]*parseInt(mins[0]);
 					alarm_counter = aft;		
 				}
 				else
@@ -195,7 +195,7 @@ $(function(){
 						{
 							var hous=hou.split("h");
 							var aft = 0,to_secs = [3600, 60, 1];
-							aft=to_secs[2]*parseInt(hous[0]);
+							aft=to_secs[0]*parseInt(hous[0]);
 							alarm_counter = aft;	
 						}
 					}
@@ -206,6 +206,7 @@ $(function(){
 		{
 			var mins=mint.split("m");
 			var aft = 0,to_secs = [3600, 60, 1];
+			//To test keep interpret the min as sec
 			aft=to_secs[2]*parseInt(mins[0]);
 			alarm_counter = aft;
 		}
