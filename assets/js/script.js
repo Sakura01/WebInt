@@ -167,9 +167,11 @@ $(function(){
 	var mint=window.localStorage.getItem('Minute');
 	if(mint)
 	{
-		alert(mint);
 		var mins=mint.split("m");
-		alert(mins[0]);
+		var aft = 0,to_secs = [3600, 60, 1];
+		aft += to_seconds[2] * parseInt(parseInt(mins[0]));
+		alarm_counter = aft;
+		alert(alarm_counter);
 	}
 	if((trigger_value==100)&&(stop!=1))
 	{
