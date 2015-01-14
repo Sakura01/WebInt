@@ -82,7 +82,6 @@
 		e.preventDefault();
 		closeMenu();
 		var who=window.localStorage.getItem('distinction');
-			alert(who);
 		if(who==1)
 		{
 		
