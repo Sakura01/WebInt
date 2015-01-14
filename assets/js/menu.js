@@ -81,7 +81,7 @@
 	$('#buttonNotification').on(click, function(e){
 		e.preventDefault();
 		closeMenu();
-		var who=window.localStorage.getItem('Distinction');
+		var who=window.localStorage.getItem('distinction');
 		if(who==0)
 		{
 			window.location = "notify_teacher.html";	
