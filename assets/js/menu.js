@@ -75,7 +75,7 @@
 	$('#buttonSchedule').on(click, function(e){
 		e.preventDefault();
 		closeMenu();
-		window.location = "index.html";
+		window.location = "schedule.html";
 		
 	});
 	$('#buttonNotification').on(click, function(e){
