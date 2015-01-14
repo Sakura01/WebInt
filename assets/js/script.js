@@ -146,7 +146,7 @@ $(function(){
 	$('#alarm-stop').click(function(){
 		$('#alarm-ring')[0].pause();
 		$('#alarm-ring')[0].currentTime = 0;
-		window.localStorage.setItem('trigger',-1);
+		window.localStorage.setItem('trigger',-100);
 	});
 	// Handle setting and clearing alamrs
 
@@ -162,7 +162,7 @@ $(function(){
 	alarm_counter=trigger_value;
 	//get msg
 	
-	//document.getElementById('msg').value=msg_value;
+	document.getElementById('msg').value="momo";
 	//alert(trigger_value);
 	if(trigger_value==100)
 	{
