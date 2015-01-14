@@ -61,23 +61,23 @@
 				<div class="button">
 				<img src="assets/img/menu.png"/>
 				</div>
-				<form  action="mysuperscript.php" autocomplete="on"> 
+				<form  name="myForm" action="" autocomplete="on"> 
 					<h1> Who are you? </h1> 
 					<p> 
 						<label for="usernamesignup" class="uname" >Username</label></br>
-						<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="name" />
+						<input id="usernamesignup" name="usernamesignup"  type="text" placeholder="name" />
 					</p>
 					<p> 
 						<label for="emailsignup" class="youmail" > Email</label> </br>
-						<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="name@eurecom.com"/> 
+						<input id="emailsignup" name="emailsignup"  type="email" placeholder="name@eurecom.com"/> 
 					</p>
 					<p> 
 						<label for="passwordsignup" class="youpasswd" >Password </label> </br>
-						<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+						<input id="passwordsignup" name="passwordsignup"  type="password" placeholder="eg. X8df!90EO"/>
 					</p>
 					
 					<p class="signin button"> 
-						<input type="submit" id="test" value="Register"/> 
+						<input type="button" id="test" value="Register"/> 
 					</p>
 					<div>
 						<em id="steps">step1</em> 
@@ -90,6 +90,16 @@
 						Already registered ?
 						<a href="login.html#tologin"> Login </a>
 					</p>
+					
+					<div class="overlay">
+						<div id="error">
+							<h2>Wrong password</h2>
+							<div class="button-holder">
+								<a class="button blue">Close</a>
+							</div>
+
+						</div>
+					</div>
 				</form>
 			</div>
 			
@@ -103,9 +113,11 @@
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 <script src="assets/js/menu.js"></script>
 <script Language="JavaScript">
+var error = $('#error').parent();
 $('#test').click(function(){
-	
+	var user = document.getElementById("usernamesignup").value;
 	var emailT = document.getElementById("emailsignup").value;
+	var pass = document.getElementById("passwordsignup").value;
 	var result = emailT.split('@')[0];
 	if(result.indexOf(".") != -1)
 	
@@ -113,8 +125,21 @@ $('#test').click(function(){
 	else
 		
 		window.localStorage.setItem('distinction',1);
-	/*location.href='new_tell_me_more.html';*/
+	
+	var x = document.forms["myForm"]["emailsignup"].value;
+    	var atpos = x.indexOf("@");
+    	var dotpos = x.lastIndexOf(".");
+    	if (!user || !pas || atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length ||) {
+    		error.fadeIn();	
+    	}
+    	else
+		 location.href='new_tell_me_more.html';
+
 });
+
+	error.click(function(){
+			error.fadeOut();
+	});
 
 </script>
 
