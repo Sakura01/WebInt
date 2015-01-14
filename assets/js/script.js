@@ -142,7 +142,7 @@ $(function(){
 	});
 	//Snooze
 	var trigger_value = window.localStorage.getItem('trigger');
-	if(trigger_value)
+	if(trigger_value=="on")
 	{
 		//Repeat each 5s
 		window.setInterval(function(){
@@ -164,9 +164,6 @@ $(function(){
 
 	});
 	
-	//get trigger
-	//trigger_value = window.localStorage.getItem('trigger');
-	//alarm_counter=trigger_value;
 	//get msg
 	var whatsup=window.localStorage.getItem('MSG');
 	document.getElementById('msg').innerHTML=whatsup;
