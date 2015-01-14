@@ -108,13 +108,16 @@ $('#test').click(function(){
 	var emailT = document.getElementById("emailsignup").value;
 	var result = emailT.split('@')[0];
 	if(result.indexOf(".") != -1)
+	{
 	
 		window.localStorage.setItem('distinction',0);
+	}
 	else
-		
+	{	
 		window.localStorage.setItem('distinction',1);
+	}
 	
-	location.href='new_tell_me_more.html';
+	window.location='new_tell_me_more.html';
 });
 
 </script>
