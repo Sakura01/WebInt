@@ -20,19 +20,6 @@
 			document.getElementById("div1").style.display="block";
 		}
 		
-		function checkListBoxSize(){
-		oSelect=document.getElementById("devices");
-		var count=0;
-		for(var i=0;i<oSelect.options.length;i++){
-		if(oSelect.options[i].selected)
-		count++;
-		}
-		if(count<1){
-		alert("Must select at least one item");
-		return false;
-		}
-		return true;
-		}
 		</script>
 </head>
 <body>
@@ -95,11 +82,20 @@
 					</select>
 					</div><br><br>
 					<p class="yes button">
-					<input type="submit" value="OK" name="submit"/>
+					<input type="button" id="test_device" value="OK" name="submit"/>
 					</p>
 					<p class="non button">
 					<input type="button" value="BACK" name="back" onclick="location.href='index.html'"/>
 					</p>
+					<div class="overlay">
+								<div id="error">
+									<h2>Must select at least one item</h2>
+									<div class="button-holder">
+									<a class="button blue">Close</a>
+									</div>
+
+								</div>
+					</div>
 					</form>
 					</div>
 				</div>
@@ -114,5 +110,24 @@
 		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 		<script src="assets/js/menu.js"></script>
+		var error = $('#error').parent();
+		$('#test_device').click(function() {
+			oSelect=document.getElementById("devices");
+			var count=0;
+			for(var i=0;i<oSelect.options.length;i++){
+			if(oSelect.options[i].selected)
+				count++;
+			}
+			if(count<1){
+				error.fadeIn();
+			}
+			else{
+				window.location='index.html';
+			}
+			
+	         });
+		error.click(function(){
+			error.fadeOut();
+		});
 </body>
 </html>
