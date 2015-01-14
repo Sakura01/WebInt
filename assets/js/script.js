@@ -161,36 +161,9 @@ $(function(){
 	trigger_value = window.localStorage.getItem('trigger');
 	alarm_counter=trigger_value;
 	//get msg
-	var min_load = window.localStorage.getItem('Minute');
-	var heure_load = window.localStorage.getItem('Heure');
-	var minB_load = window.localStorage.getItem('MinuteB');
-	if(min_load)
-	{
-		alert("Nb"+min_load);
-		document.getElementById('msg').innerHTML="Sleep"+"\t"+min_load+"\t"+"more";
-		window.localStorage.setItem('Minute',"0min");
-	}
-	else
-	{
-		if(minB_load)
-		{
-			alert("B"+minB_load);
-			document.getElementById('msg').innerHTML="Sleep"+"\t"+minB_load+"\t"+"more";
-			window.localStorage.setItem('MinuteB',"0min");
-		}
-		else
-		{
-			if(heure_load)
-			{
-				alert("H"+heure_load);
-				document.getElementById('msg').innerHTML="Sleep"+"\t"+heure_load+"\t"+"more";
-				window.localStorage.setItem('Heure',"0h");
-			}
-		}
-	}
-	
-	
-	//alert(trigger_value);
+	var whatsup=window.localStorage.getItem('MSG');
+	document.getElementById('msg').innerHTML=whatsup;
+
 	if((trigger_value==100)&&(stop!=1))
 	{
 		//Repeat each 5s
