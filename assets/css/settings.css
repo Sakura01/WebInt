@@ -104,7 +104,8 @@
 		position: absolute;
 		top: 0px; left: 0px;
 		height: 568px; width: 320px;
-		background: #dbe4e6 no-repeat center center; 
+		background: rgb(250, 250, 250);
+		/*background: #dbe4e6 no-repeat center center; */
 		-webkit-background-size: cover;
 		   -moz-background-size: cover;
 		     -o-background-size: cover;
