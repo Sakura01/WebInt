@@ -176,27 +176,42 @@ $(function(){
 	var hou=window.localStorage.getItem('Heure');
 	if(mint)
 	{
-		var mins=mint.split("m");
-		var aft = 0,to_secs = [3600, 60, 1];
-		aft=to_secs[2]*parseInt(mins[0]);
-		alarm_counter = aft;
-		alert(mint);
-	}
-	if(mintB)
-	{
-		var mins=mintB.split("m");
-		alert(mintB);
-		var aft = 0,to_secs = [3600, 60, 1];
-		aft=to_secs[2]*parseInt(mins[0]);
-		alarm_counter = aft;
-	}
-	if(hou)
-	{
-		var hous=hou.split("h");
-		alert(hou);
-		var aft = 0,to_secs = [3600, 60, 1];
-		aft=to_secs[2]*parseInt(hous[0]);
-		alarm_counter = aft;
+		if(mint==-100)
+		{
+			if(mintB)
+			{
+				if(mintB!=-100)
+				{
+					var mins=mintB.split("m");
+					alert(mintB);
+					var aft = 0,to_secs = [3600, 60, 1];
+					aft=to_secs[2]*parseInt(mins[0]);
+					alarm_counter = aft;		
+				}
+				else
+				{
+					if(hou)
+					{
+						if(hou!=-100)
+						{
+							var hous=hou.split("h");
+							alert(hou);
+							var aft = 0,to_secs = [3600, 60, 1];
+							aft=to_secs[2]*parseInt(hous[0]);
+							alarm_counter = aft;	
+						}
+					}
+				}
+			}
+		}
+		else
+		{
+			var mins=mint.split("m");
+			var aft = 0,to_secs = [3600, 60, 1];
+			aft=to_secs[2]*parseInt(mins[0]);
+			alarm_counter = aft;
+			alert(mint);
+		}
 	}
 
 	//get file browsed
