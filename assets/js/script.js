@@ -141,7 +141,7 @@ $(function(){
 		clock.toggleClass('light dark');
 	});
 	//Snooze
-
+	
 	//slide stop
 	$('#alarm-stop').click(function(){
 		$('#alarm-ring')[0].pause();
