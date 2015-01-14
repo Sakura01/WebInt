@@ -193,7 +193,7 @@ $(function(){
 	}
 	else
 	{
-		var hous=hou.split("m");
+		var hous=hou.split("h");
 		var aft = 0,to_secs = [3600, 60, 1];
 		aft=to_secs[2]*parseInt(hous[0]);
 		alarm_counter = aft;
