@@ -18,15 +18,7 @@ var error = $('#error').parent();
 
 		$('input[name="trigger-choice"]').change(function() {
 			var triggered = this.value;
-			var snooze=triggered.localeCompare("snooze");
-			//alarm.addClass('active');
-			//Demander au prof
-			if(snooze==0)
-			{
-				alarm_counter=-400;
-				
-			}
-			window.localStorage.setItem('trigger',alarm_counter);
+			window.localStorage.setItem('trigger',triggered);
 		});	
 			//Browse for ringtone
 		$( "#file_upload" ).change(function() {
