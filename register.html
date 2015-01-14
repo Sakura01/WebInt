@@ -61,7 +61,7 @@
 				<div class="button">
 				<img src="assets/img/menu.png"/>
 				</div>
-				<form   autocomplete="on"> 
+				<form   action="new_make_smarter.html" autocomplete="on"> 
 					<h1> Who are you? </h1> 
 					<p> 
 						<label for="usernamesignup" class="uname" >Username</label></br>
@@ -76,9 +76,10 @@
 						<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
 					</p>
 					
-					<p class="signin button"> 
-						<button id="test"> Register  </button>
+					<p class="login button"> 
+							<input type="submit" id="test" name="valid_password" value="Ok" /> 
 					</p>
+					
 					<div>
 						<em id="steps">step1</em> 
 						<em>> step2 > </em>
@@ -90,6 +91,8 @@
 						Already registered ?
 						<a href="login.html#tologin"> Login </a>
 					</p>
+					
+					
 				</form>
 			</div>
 			
@@ -103,22 +106,20 @@
 <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 <script src="assets/js/menu.js"></script>
 <script Language="JavaScript">
+
 $('#test').click(function(){
 	
 	var emailT = document.getElementById("emailsignup").value;
 	var result = emailT.split('@')[0];
 	if(result.indexOf(".") != -1)
-	{
 	
 		window.localStorage.setItem('distinction',0);
-	}
 	else
-	{	
+		
 		window.localStorage.setItem('distinction',1);
-	}
-        window.location="new_make_smarter.html";
-
+	
 });
+
 
 </script>
 
