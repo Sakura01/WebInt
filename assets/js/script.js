@@ -161,6 +161,27 @@ $(function(){
 	trigger_value = window.localStorage.getItem('trigger');
 	alarm_counter=trigger_value;
 	//get msg
+	var min_load = window.localStorage.getItem('Minute');
+	var heure_load = window.localStorage.getItem('Heure');
+	var minB_load = window.localStorage.getItem('MinuteB');
+	if(min_load)
+	{
+		alert(min_load);
+	}
+	else
+	{
+		if(minB_load)
+		{
+			alert(minB_load);
+		}
+		else
+		{
+			if(heure_load)
+			{
+				alert(heure_load);
+			}
+		}
+	}
 	
 	document.getElementById('msg').innerHTML="momo";
 	//alert(trigger_value);
