@@ -94,9 +94,9 @@
 	heure_load = window.localStorage.getItem('Heure');
 	minB_load = window.localStorage.getItem('MinuteB');
 	alert("H"+heure_load);
-	if(!min_load)
+	if(min_load==0)
 	{
-		if(!minB_load)
+		if(minB_load==0)
 		{
 			//var minB = "late:"+heure_load
 			if(heure_load)
