@@ -73,7 +73,6 @@ function findItemById(id) {
 
 
 // Activate Backpack modal 
-// http://getbootstrap.com/javascript/#modals
 $('#modal-backpack').on('show.bs.modal', function (event) {
 	var button = $(event.relatedTarget) 
 	var scheduledItem = button.parents('tr')
@@ -95,10 +94,11 @@ $('#modal-backpack').on('show.bs.modal', function (event) {
 	}
 })
 
+// Activate ringtone modal
 $('#modal-ringtone').on('show.bs.modal', function (event) {
 	var button = $(event.relatedTarget) 
 	var scheduledItem = button.parents('tr')
-	var itemid = scheduledItem.ettr('itemid')
+	var itemid = scheduledItem.attr('itemid')
 	var course = scheduledItem.find('.course-name').val() 
 
 	var modal = $(this)
@@ -151,32 +151,33 @@ function addBackpackItem(interceptor){
 	}
 }
 
-function removeLi(what){
-	removeElement(what, 'LI')
+function removeLi(what, dirty){
+	removeElement(what, 'LI', false)
 }
 
 function removeTr(what){
 	removeElement(what, 'TR')
 }
 
-function removeElement(what, tag_name){
+function removeElement(what, tag_name, need_save){
 	elem = what
 	while(elem.nodeName != tag_name){
 		elem = elem.parentNode
 	}
 	elem.parentNode.removeChild(elem)
-	dirty()
+	if (need_save !== false){dirty()}
+}
+
+function removeNotification(what){
+	removeLi(what, false)
 }
 
 function selectSound(caller){
-	var activeLi = caller
-	var items = activeLi.parentNode.childNodes
-	for(i=0; i < items.length; i++){
-		if (items[i].nodeName == 'LI'){
-			items[i].className = "clickable"
-		}
-	}
-	activeLi.className = "clickable active"
+	var activeLi = $(caller)
+	var items = activeLi.parents("#ringtone-selector").children('li')
+	items.toggleClass("active", false)
+	activeLi.toggleClass("active", true)
+	dirty('ringtone')
 }
 
 function playSound(sound){
@@ -193,7 +194,10 @@ function playSound(sound){
 
  var saved = true
 
-function dirty(){
+/* Check for real-time modifications 
+	Reversibility not implemented 
+	(ie. if data changed back to what is was, will still show warning) */
+function dirty(whatVariable){
 	saved = false
 	$(".save-state").toggleClass('need-save', true)
 		.text("Warning ! Data not saved")
@@ -231,7 +235,12 @@ function validate(){
 		})
 	})
 	if (!errors){
+		$(".save-state").toggleClass('need-save', false)
+		.text("Saved !")
 		saveSchedule()
+	} else{
+		$(".save-state").toggleClass('need-save', true)
+		.text("Time with format xxHmm !")
 	}
 }
 
@@ -286,9 +295,10 @@ function saveBackpack(){
 
 //Save selected ringtone
 function saveSelectedRingtone(){
+	var list = $(this).parents("#ringtone-selector")
 	var id = list.attr("itemid")
 	var item = findItemById(id)
-	item["ringtone"] = $("#ringtone-selector li.active")[0]
+	item["ringtone"] = list.find("li.active")[0]
 }
 
 

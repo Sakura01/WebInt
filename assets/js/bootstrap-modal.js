@@ -1,3 +1,11 @@
+/**** NOTE ****/
+/*
+  I took this single javascript file from bootstrap, 
+  as it offered some nice helpers to deal with modals "popups"
+*/
+
+
+
 /* ========================================================================
  * Bootstrap: modal.js v3.3.1
  * http://getbootstrap.com/javascript/#modals

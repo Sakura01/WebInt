@@ -30,22 +30,22 @@
 							</button> 
 						</li>
 						<li>
-							<button class="shiny" id="buttonSchedule" onclick="loadContent(2)">
+							<button class="shiny" id="buttonSchedule" >
 								<img src="assets/img/schedule.png"/>
 							</button> 
 						</li>
 						<li>
-							<button class="shiny" id="buttonNotification" onclick="loadContent(3)"> 
+							<button class="shiny" id="buttonNotification"> 
 								<img src="assets/img/notification.png"/>
 							</button> 
 						</li>
 						<li>
-							<button class="shiny" id="buttonDevice" onclick="loadContent(4)">
+							<button class="shiny" id="buttonDevice" >
 								<img src="assets/img/devices.png"/>
 							</button> 
 						</li>
 						<li>
-							<button class="shiny" id="buttonQuit" onclick="loadContent(5)">
+							<button class="shiny" id="buttonQuit" >
 								<img src="assets/img/quit.png"/>
 							</button>  
 						</li>
@@ -59,7 +59,8 @@
 							<table class="table table-bordered table-striped" id="courses-list" onload="loadModals()">
 								<tbody class="blueprint">
 									<tr id="row-blueprint" class="form-group">
-										<td><select class="form-control course-day" onChange="dirty()">
+										<td>
+										<select class="form-control course-day" onChange="dirty()">
 											<option value="monday">Monday</option>
 											<option value="tuesday">Tuesday</option>
 											<option value="wednesday">Wednesday</option>
@@ -67,21 +68,30 @@
 											<option value="friday">Friday</option>
 											<option value="saturday">Saturday</option>
 											<option value="sunday">Sunday</option>
+										</select>
 										</td>
-										<td><input class="form-control course-name" type="text" placeholder="Course name" onChange="dirty()"></td>
-										<td><input class="form-control course-time" type="time" placeholder="8H30" onChange="dirty()"></td>
-										<td><button type="button" class="btn btn-default course_backpack" 
-											 data-toggle="modal" data-target="#modal-backpack"><img src="assets/img/backpack.jpg" alt="backpack"></button></td>
-										<td><button type="button" class="btn btn-default course_ringtone"
-											  data-toggle="modal" data-target="#modal-ringtone"><img src="assets/img/ringtone.png" alt="ringtone"></button></td>
 										<td>
-											<button type="button" class="btn btn-default course_status">No msg</button>
+											<input class="form-control course-name" type="text" placeholder="Course name" onChange="dirty()">
+										</td>
+										<td>
+											<input class="form-control course-time" type="time" placeholder="8H30" onChange="dirty()">
+										</td>
+										<td>
+											<button type="button" class="btn btn-default course_backpack" data-toggle="modal" data-target="#modal-backpack"><img src="assets/img/backpack.jpg" alt="backpack"></button>
+										</td>
+										<td>
+											<button type="button" class="btn btn-default course_ringtone"
+											  data-toggle="modal" data-target="#modal-ringtone"><img src="assets/img/ringtone.png" alt="ringtone"></button>
+										</td>
+										<td>
+											<button type="button" class="btn btn-default course_status" data-toggle="modal" data-target="#modal-notifications">No msg</button>
 											<button type="button" class="btn btn-danger btn-xs" onclick="removeRow(this)">X</button>
 										</td>
 									</tr>
 								</tbody>
 
 								<tbody id="scheduled-items">
+									<!-- Scheduled items to be put here -->
 								</tbody>
 
 								<tbody>
@@ -91,12 +101,18 @@
 								</tbody>
 							</table>
 						</form>
-						<hr>
 						<div class="state-info">
 							<span class="save-state">Data saved</span>
-							<button type="submit" onclick="validate()" class="btn btn-success">Save changes</button>
+							<button type="submit" onclick="validate()" class="btn btn-submit">Save changes</button>
 						</div>
 					</div>
+
+					<!-- ### MODAL WINDOWS (popups) ##-->
+					<!-- 	- Backpack
+							- Ringtone selector
+							- Notifications -->
+					<!--	Each modal should retrieve the itemid of the current course
+							and save to local storage before exiting -->
 
 					<!-- Backpack Modal -->
 					<div class="modal" id="modal-backpack" tabindex="-1" role="dialog" aria-labelledby="backpack-items" aria-hidden="true">
@@ -110,7 +126,7 @@
 									<ul class="nice-list" id="items-list">
 										<li class="blueprint" id="backpack-item-blueprint">
 											<input type="text" class="form-control input-inline course-backpack-item" placeholder="Name of item to bring">
-											<button type="button" class="btn btn-danger" onclick="removeLi(this)">Remove</button>
+											<button type="button" class="btn btn-danger" onclick="removeLi(this)">X</button>
 										</li>
 
 
@@ -136,39 +152,39 @@
 								</div>
 								<div class="modal-body">
 									<ul class="nice-list" id="ringtone-selector">
-										<!-- OMG not sure this is HTML valid to have ul inside ul. 
-											However, cannot leave li, as javascript will cruch "blueprint" class
-											when adding a new item
-											as it is now, see selectSound() -->
-										<ul class="blueprint">
-										<li class="clickable" id="ringtone-blueprint" onclick="selectSound(this)">
-											Name of song <button class="btn btn-default btn btn-default ringtone-preview" onclick="playSound('demo')"><img src="assets/img/ringtone.png" alt="play_sound"></button> 
-										</li>
-										</ul>
 
+										<!-- Blueprint that should be duplicated for every ringtone available -->
+										<li class="clickable blueprint" id="ringtone-blueprint" onclick="selectSound(this)">
+											Name of song <button class="btn btn-default ringtone-preview" onclick="playSound('demo')"><img src="assets/img/ringtone.png" alt="play_sound"></button> 
+										</li>
+
+										<!-- Because the function isn't implemented, a few default ringtones in a list -->
 										<li class="clickable active" onclick="selectSound(this)">
 											Sonar<button class="btn btn-default ringtone-preview" onclick="playSound('demo')"><img src="assets/img/ringtone.png" alt="play_sound"></button> 
 										</li>
 
 										<li class="clickable" onclick="selectSound(this)">
-											Trololololl<button class="btn btn-default ringtone-preview" onclick="playSound('demo')"><img src="assets/img/ringtone.png" alt="play_sound"></button> 
+											Cow<button class="btn btn-default ringtone-preview" onclick="playSound('demo')"><img src="assets/img/ringtone.png" alt="play_sound"></button> 
 										</li>
 
 										<li class="clickable" onclick="selectSound(this)">
-											Trololololl<button class="btn btn-default ringtone-preview" onclick="playSound('demo')"><img src="assets/img/ringtone.png" alt="play_sound"></button> 
+											Michael Jackson<button class="btn btn-default ringtone-preview" onclick="playSound('demo')"><img src="assets/img/ringtone.png" alt="play_sound"></button> 
 										</li>
 
 										<li class="clickable" onclick="selectSound(this)">
-											Trololololl<button class="btn btn-default ringtone-preview" onclick="playSound('demo')"><img src="assets/img/ringtone.png" alt="play_sound"></button> 
+											I love webint ♪♫<button class="btn btn-default ringtone-preview" onclick="playSound('demo')"><img src="assets/img/ringtone.png" alt="play_sound"></button> 
 										</li>
 									</ul>
 
+
+									<!-- Clicking the ringtone should update 
+										this HTML5 <audio> tag source used to play the ringtone (something similar was done in assignment 3 ^^) -->
 									<div id="audio-list">
 										<ul>
 											<li><audio id='demo'>
 												<source src="assets/audio/demo-audio.mp3" type="audio/mpeg">
 												<source src="assets/audio/demo-audio.ogg" type="audio/ogg">
-												Your browser does not support the audio element
+												Your phone does not support the audio element
 											</audio></li>
 										</ul>
 
@@ -182,17 +198,51 @@
 						</div>
 					</div>
 					<!-- End ringtone modal -->
+
+					<!-- Notification modal -->
+					<div class="modal" id="modal-notifications" tabindex="-1" role="dialog" aria-labelledby="notifications" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="btn btn-danger btn-xs close" data-dismiss="modal"><span aria-hidden="true">&times;</button>
+									<h4 class="modal-title">Notifications for course </h4>
+								</div>
+								<div class="modal-body">
+									<ul class="nice-list" id="notification-list">
+										<!-- If a notification is received, push it to the list of unseen notifications by duplicating this blueprint -->
+										<li id="notification-blueprint" class="blueprint">
+											<span class="notification-text"></span>
+											<span class="notification-extra-data"></span>
+											<button class="btn btn-danger notification-close" onclick="removeNotification(this)">Seen</button> 
+										</li>
+
+										<!-- A sample notification -->
+										<li class="notification">
+											<span class="notification-text">
+												I will be late
+											</span>
+											<span class="notification-extra-data">By 2 hours</span>
+											<button class="btn btn-danger notification-close" onclick="removeNotification(this)">Seen</button> 
+										</li>
+
+									</ul>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- End notification modal -->
 				</div>
 			</div>
 		</div>
 	</div>
-		<!-- JavaScript Includes -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
-		<script src="assets/js/bootstrap-modal.js"></script>
-		<script src="assets/js/schedule.js"></script>
-		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-		<script src="assets/js/menu.js"></script>
+	<!-- JavaScript Includes -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+	<script src="assets/js/bootstrap-modal.js"></script>
+	<script src="assets/js/schedule.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 </body>
 </html>
