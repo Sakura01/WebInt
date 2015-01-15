@@ -520,7 +520,7 @@ input::-webkit-inner-spin-button {
 
 #alarm-dialog, 
 #time-is-up,#error{
-	width:310px;
+	width:280px;
 	height:200px;
 	background-color:#fff;
 	border-radius:2px;
