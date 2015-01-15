@@ -27,7 +27,7 @@ ul.nice-list{
  }
 
 ul.nice-list li{
-	height: 32px;
+	height: 35px;
 	display: block;
 	position: relative;
 	float: none;
@@ -37,25 +37,16 @@ ul.nice-list li{
 	color: black;
 }
 
-ul.nice-list .active{
+ul.nice-list li.active{
 	background-color: #888;
 	color: white;
 }
 
-
-
-.vertical-text{
-    text-align: center;
-    vertical-align: middle;
-    width: 60px !important;
-    margin: 0px;
-    height: 100%;
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-top: 10px;
-    white-space: nowrap;
-    transform: rotate(-90deg); 
+ul.nice-list li:hover, ul.nice-list li:focus{
+	background-color: #424242;
+	color: white;
 }
+
 
 .blueprint{
 	display: none !important;
@@ -88,6 +79,18 @@ ul.nice-list .active{
 	background-color: #5cb85c;
     border-color: #4cae4c;
     color: #fff;
+}
+
+.btn-submit{
+	background: none repeat scroll 0 0 #b0e0e6;
+    border-radius: 3px;
+    box-shadow: 0 1px 6px 4px rgba(0, 0, 0, 0.07) inset, 0 0 0 3px rgb(254, 254, 254), 0 5px 3px 3px rgb(210, 210, 210);
+    color: #fff;
+    cursor: pointer;
+    font-family: "BebasNeueRegular","Arial Narrow",Arial,sans-serif;
+    font-size: 24px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s linear 0s;
 }
 
 .btn-xs{
@@ -317,11 +320,20 @@ input.has-error.form-control:focus {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 6px #ce8483;
 }
 
+/**** Save info ****/
+
 .state-info{
+	padding: 15px 5px 5px 5px;
 	bottom: 0;
 	right: 0;
 	display: inline-block;
+	float: right;
 	text-align: right;
+}
+
+.save-state{
+	padding-right: 20px;
+	font-size: 18px;
 }
 
 .need-save{
