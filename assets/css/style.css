@@ -170,21 +170,28 @@
 	#custom_clock{
 		clear:both;float:center;
 	}
+	#message{
+		text-align: center;
+	}
 	#message h1
 	{
+		text-align: left;
 		font-size: 15px;
 	}
 	/*relative*/
 	.bubble{
+		text-align: left;
 	  position:relative;
 	  display: inline-block;
 	  top:10px;
 	  padding: 20px;
-	  margin-left:100px;
 	  color:#ffffff;
 	  background:#00c7cc;
 	  border:2px solid #0ca8b2;
 	  border-radius:20px;
+	  width: 100%;
+	  max-height: 150px;
+	  max-width: 240px;
 	  /*outline:0;*/
 	}
 	.bubble:after{
