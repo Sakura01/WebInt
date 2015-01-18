@@ -1,9 +1,11 @@
 
-
-
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
 	margin:0;
 	padding:0;
+}
+
+#message{
+	padding-left: 20px;
 }
 
 #steps{
@@ -337,6 +339,7 @@ p.change_link{
 	border-top: 1px solid rgb(219, 229, 232);
 	border-radius: 0 0  5px 5px;
 	background: rgb(225, 234, 235);
+	text-align: center;
 }
 .content p.change_link a {
 	display: inline-block;

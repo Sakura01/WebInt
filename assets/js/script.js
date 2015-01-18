@@ -166,7 +166,8 @@ $(function(){
 	
 	//get msg
 	var whatsup=window.localStorage.getItem('MSG');
-	document.getElementById('msg').innerHTML=whatsup;
+	var msgdiv = document.getElementById('msg')
+	if (msgdiv){msgdiv.innerHTML=whatsup} ;
 	//get trigger from notifs
 	var mint=window.localStorage.getItem('Minute');
 	var mintB=window.localStorage.getItem('MinuteB');
@@ -213,15 +214,14 @@ $(function(){
 	
 	var song_value = window.localStorage.getItem('songid');
 	var file_name = window.localStorage.getItem('fileName');
-	if(song_value!=0)
-	{
-		document.getElementById('alarm-ring').src=song_value;
-	}
-	else
-	{
-		if(file_name!=0)
-		{
-			document.getElementById('alarm-ring').src=file_name;
+	if(document.getElementById('alarm-ring')){
+		if(song_value!=0){
+				document.getElementById('alarm-ring').src=song_value;
+		} else {
+			if(file_name!=0)
+			{
+				document.getElementById('alarm-ring').src=file_name;
+			}
 		}
 	}
 	//Close dialog for setting

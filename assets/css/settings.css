@@ -1,255 +1,254 @@
 /*	Basic Reset and General */
-	* { 
-		margin: 0px; 
-		padding: 0px; 
-	}
-	html, body {
-		min-width: 435px;
-		min-height: 1000px;
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
-	
+* { 
+	margin: 0px; 
+	padding: 0px; 
+}
+html, body {
+	min-width: 435px;
+	min-height: 1000px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 
 
 
-		@keyframes pulse {
-			0%   { opacity: 0; }
-			50%  { opacity: 1; }
-			100% { opacity: 0; }
-		}
-		@-webkit-keyframes pulse {
-			0%   { opacity: 0; }
-			50%  { opacity: 1; }
-			100% { opacity: 0; }
-		}
-		
+
+@keyframes pulse {
+	0%   { opacity: 0; }
+	50%  { opacity: 1; }
+	100% { opacity: 0; }
+}
+@-webkit-keyframes pulse {
+	0%   { opacity: 0; }
+	50%  { opacity: 1; }
+	100% { opacity: 0; }
+}
+
 
 
 
 /*	The Device */
 
-	div.iphone {
-		height: 810px; width: 435px; 
-		position: absolute;
-		margin: auto;
-		top: 0px; bottom: 80px; left: 0px; right: 0px;
-		background: url('http://creativeda.sh/sandbox/social_menu/img/iphone.png') no-repeat center center; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-	}
-	div.screen {
-		height: 568px; width: 320px;
-		position: absolute;
-		top: 119px; left: 59px;
-		overflow: hidden;
-		position: relative;
-	}
+div.iphone {
+	height: 810px; width: 435px; 
+	position: absolute;
+	margin: auto;
+	top: 0px; bottom: 80px; left: 0px; right: 0px;
+	background: url('http://creativeda.sh/sandbox/social_menu/img/iphone.png') no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+div.screen {
+	height: 568px; width: 320px;
+	position: absolute;
+	top: 119px; left: 59px;
+	overflow: hidden;
+	position: relative;
+}
 
 
 /*	Content */
-	div.menu {
-		position: absolute;
-		height: 100%; width: 100%;
-		background: url('http://creativeda.sh/sandbox/social_menu/img/blur.jpg') no-repeat center center; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-	}
-	div.menu ul { 
-		width: 600px;
-		list-style: none; 
-		margin: 95px 0px 0px 75px;
-	}
-	div.menu li {
+div.menu {
+	position: absolute;
+	height: 100%; width: 100%;
+	background: url('http://creativeda.sh/sandbox/social_menu/img/blur.jpg') no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+div.menu ul { 
+	width: 600px;
+	list-style: none; 
+	margin: 95px 0px 0px 75px;
+}
+div.menu li {
 
-		margin-bottom: 20px;
-		
-		-webkit-transition: all 400ms ease-in-out, opacity 1000ms ease;
-		   -moz-transition: all 400ms ease-in-out, opacity 1000ms ease;
-			-ms-transition: all 400ms ease-in-out, opacity 1000ms ease;
-			 -o-transition: all 400ms ease-in-out, opacity 1000ms ease;
-				transition: all 400ms ease-in-out, opacity 1000ms ease;
-		-webkit-transform: translate3d(-150px, 0px, 0px) scale(0.2);
-		opacity: 0;
-	}
-	div.menu li.visible {
-		-webkit-transform: translate3d(0px, 0px, 0px) scale(1);
-		opacity: 1;
-	}
-		
-	div.status {
-		position: absolute;
-		top: 0px; left: 0px;
-		z-index: 200;
-		height: 20px; width: 100%;
-		background: url('http://creativeda.sh/sandbox/social_menu/img/status_black.png') no-repeat center center; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-	}
-	div.status.active {
-		background-image: url('http://creativeda.sh/sandbox/social_menu/img/status_white.png'); 
-	}
-	
-	div.content {
-		position: absolute;
-		top: 0px; left: 0px;
-		height: 568px; width: 320px;
-		background: rgb(250, 250, 250);
-		/*background: #dbe4e6 no-repeat center center; */
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-		-webkit-transition: all 300ms ease-in-out;
-		   -moz-transition: all 300ms ease-in-out;
-		    -ms-transition: all 300ms ease-in-out;
-		     -o-transition: all 300ms ease-in-out;
-		        transition: all 300ms ease-in-out;
-		-webkit-backface-visibility: hidden;
-	}
-		div.content.inactive {
-			cursor: pointer;
-			-webkit-transform: translate3d(160px, 0px, 0px) scale(0.5);
-			   -moz-transform: translate3d(160px, 0px, 0px) scale(0.5);
-			    -ms-transform: translate3d(160px, 0px, 0px) scale(0.5);
-			        transform: translate3d(160px, 0px, 0px) scale(0.5);
-		}
-	
-	
-	div.button {
-		width: 30px; height: 30px;
-		position: absolute;
-		top: 23px; left: 3px;
-		cursor: pointer;
-	}
-	/*Menu buttons*/	
-	.shiny {
-    padding: 4px 20px;
-    /*give the background a gradient*/
-    background:#f3f3f3; /*fallback for browsers that don't support gradients*/
-    background: -webkit-linear-gradient(top, #f3f3f3, #eceef0);
-    background: -moz-linear-gradient(top, #f3f3f3, #eceef0);
-    background: -o-linear-gradient(top, #f3f3f3, #eceef0);
-    background: linear-gradient(top, #f3f3f3, #eceef0);
-    border:2px outset #dad9d8;
-    /*style the text*/
-    font-family:Andika, Arial, sans-serif; /*Andkia is available at http://www.google.com/webfonts/specimen/Andika*/
-    font-size:1.1em;
-    letter-spacing:0.05em;
-    text-transform:uppercase;
-    color:#fff;
-    text-shadow: 0px 1px 10px #000;
-    /*add to small curve to the corners of the button*/
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    /*give the button a drop shadow*/
-    -webkit-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
-    -moz-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
-    box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
-    }
-    /****NOW STYLE THE BUTTON'S HOVER STATE***/
-    .shiny:hover, .shiny:focus {
-    border:2px solid #dad9d8;
-    }
-	/*Trigger+Snooze*/
-	div.alarm-triggered{
+	margin-bottom: 20px;
 
-		position: relative;
-		top: 100px; 
-		float:center;
-	}
-	/*Trigger+Snooze*/
-	div.alarm-ringtones{
+	-webkit-transition: all 400ms ease-in-out, opacity 1000ms ease;
+	-moz-transition: all 400ms ease-in-out, opacity 1000ms ease;
+	-ms-transition: all 400ms ease-in-out, opacity 1000ms ease;
+	-o-transition: all 400ms ease-in-out, opacity 1000ms ease;
+	transition: all 400ms ease-in-out, opacity 1000ms ease;
+	-webkit-transform: translate3d(-150px, 0px, 0px) scale(0.2);
+	opacity: 0;
+}
+div.menu li.visible {
+	-webkit-transform: translate3d(0px, 0px, 0px) scale(1);
+	opacity: 1;
+}
 
-		position: relative;
-		top: 200px; 
-		float:center;
-	}
-	fieldset {
-		border: solid  #ffffff;
-		color:#c8c8c8;
-		margin-left:10px;
-		margin-right:10px;
-	}
-	legend {
-		font-size: 1.3em;
-		font-weight: bold;
-	}
-	label {
-	  width: 200px;
-	  border-radius: 3px;
-	  border: 1px solid #D1D3D4
-	}
+div.status {
+	position: absolute;
+	top: 0px; left: 0px;
+	z-index: 200;
+	height: 20px; width: 100%;
+	background: url('http://creativeda.sh/sandbox/social_menu/img/status_black.png') no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+div.status.active {
+	background-image: url('http://creativeda.sh/sandbox/social_menu/img/status_white.png'); 
+}
+
+div.content {
+	position: absolute;
+	top: 0px; left: 0px;
+	height: 568px; width: 320px;
+	background: rgb(250, 250, 250);
+	/*background: #dbe4e6 no-repeat center center; */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	-webkit-backface-visibility: hidden;
+}
+div.content.inactive {
+	cursor: pointer;
+	-webkit-transform: translate3d(160px, 0px, 0px) scale(0.5);
+	-moz-transform: translate3d(160px, 0px, 0px) scale(0.5);
+	-ms-transform: translate3d(160px, 0px, 0px) scale(0.5);
+	transform: translate3d(160px, 0px, 0px) scale(0.5);
+}
+
+
+div.button {
+	width: 30px; height: 30px;
+	position: absolute;
+	top: 23px; left: 3px;
+	cursor: pointer;
+}
+/*Menu buttons*/	
+.shiny {
+	padding: 4px 20px;
+	/*give the background a gradient*/
+	background:#f3f3f3; /*fallback for browsers that don't support gradients*/
+	background: -webkit-linear-gradient(top, #f3f3f3, #eceef0);
+	background: -moz-linear-gradient(top, #f3f3f3, #eceef0);
+	background: -o-linear-gradient(top, #f3f3f3, #eceef0);
+	background: linear-gradient(top, #f3f3f3, #eceef0);
+	border:2px outset #dad9d8;
+	/*style the text*/
+	font-family:Andika, Arial, sans-serif; /*Andkia is available at http://www.google.com/webfonts/specimen/Andika*/
+	font-size:1.1em;
+	letter-spacing:0.05em;
+	text-transform:uppercase;
+	color:#fff;
+	text-shadow: 0px 1px 10px #000;
+	/*add to small curve to the corners of the button*/
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	/*give the button a drop shadow*/
+	-webkit-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+	-moz-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+	box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+}
+/****NOW STYLE THE BUTTON'S HOVER STATE***/
+.shiny:hover, .shiny:focus {
+	border:2px solid #dad9d8;
+}
+/*Trigger+Snooze*/
+div.config-options{
+	margin-top: 100px;
+}
+/*http://stackoverflow.com/questions/6447045/css3-selector-first-of-type-with-class-name*/
+.config-options ~ .config-options{
+	margin-top: 50px; 
+	padding: 5px;
+}
+
+#alarm-triggered{
+}
+#alarm-ringtones{
+}
+fieldset {
+	margin-left:10px;
+	margin-right:10px;
+	padding: 10px;
+}
+legend {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+label {
+	width: 200px;
+	border-radius: 3px;
+	border: 1px solid #D1D3D4
+}
 
 /* hide input */
-	input.radio:empty {
-		margin-left: -999px;
-	}
+input.radio:empty {
+	margin-left: -999px;
+}
 
 /* style label */
-	input.radio:empty ~ label {
-		position: relative;
-		float: left;
-		line-height: 1.5em;
-		text-indent: 2.25em;
-		margin-top: 1em;
-		cursor: pointer;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
+input.radio:empty ~ label {
+	position: relative;
+	float: left;
+	line-height: 1.5em;
+	text-indent: 2.25em;
+	margin-top: 1em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 
-	input.radio:empty ~ label:before {
-		position: absolute;
-		display: block;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		content: '';
-		width: 2em;
-		background: #7ab5ec;
-		border-radius: 3px 0 0 3px;
-	}
+input.radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2em;
+	background: #7ab5ec;
+	border-radius: 3px 0 0 3px;
+}
 
-	/* toggle hover */
-	input.radio:hover:not(:checked) ~ label:before {
-		content:'\2714';
-		text-indent: .9em;
-		color: #ffffff;
-	}
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #ffffff;
+}
 
-	input.radio:hover:not(:checked) ~ label {
-		color: #888;
-	}
+input.radio:hover:not(:checked) ~ label {
+	color: #888;
+}
 
-	/* toggle on */
-	input.radio:checked ~ label:before {
-		content:'\2714';
-		text-indent: .9em;
-		color: #ffffff;
-		background-color: #afeeee;
-	}
+/* toggle on */
+input.radio:checked ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #ffffff;
+	background-color: #afeeee;
+}
 
-	input.radio:checked ~ label {
-		color: #777;
-	}
+input.radio:checked ~ label {
+	color: #777;
+}
 
-	/* radio focus */
-	input.radio:focus ~ label:before {
-		box-shadow: 0 0 0 3px #999;
-	}
+/* radio focus */
+input.radio:focus ~ label:before {
+	box-shadow: 0 0 0 3px #999;
+}
 
 /*File Browser*/
 
@@ -327,110 +326,110 @@ div.file_upload input {
 /*Error dialog*/
 /*-------------------------
 		Button
---------------------------*/
+		--------------------------*/
 
 
-.button-holder{
-	text-align:center;
-	padding-bottom:100px;
-}
+		.button-holder{
+			text-align:center;
+			padding-bottom:100px;
+		}
 
-a.button{
-	background-color:#f6a7b3;
-	
-	background-image:-webkit-linear-gradient(top, #f6a7b3, #f0a3af);
-	background-image:-moz-linear-gradient(top, #f6a7b3, #f0a3af);
-	background-image:linear-gradient(top, #f6a7b3, #f0a3af);
+		a.button{
+			background-color:#f6a7b3;
 
-	border:1px solid #eb9ba7;
-	border-radius:2px;
+			background-image:-webkit-linear-gradient(top, #f6a7b3, #f0a3af);
+			background-image:-moz-linear-gradient(top, #f6a7b3, #f0a3af);
+			background-image:linear-gradient(top, #f6a7b3, #f0a3af);
 
-	box-shadow:0 2px 2px #ccc;
+			border:1px solid #eb9ba7;
+			border-radius:2px;
 
-	color:#fff;
-	text-decoration: none !important;
-	padding:15px 20px;
-	display:inline-block;
-	cursor:pointer;
+			box-shadow:0 2px 2px #ccc;
 
-	position:relative;
-	z-index: 1;
-}
+			color:#fff;
+			text-decoration: none !important;
+			padding:15px 20px;
+			display:inline-block;
+			cursor:pointer;
 
-a.button:hover{
-	opacity:0.9;
-}
+			position:relative;
+			z-index: 1;
+		}
+
+		a.button:hover{
+			opacity:0.9;
+		}
 
 
 
-/* Button Slide */
+		/* Button Slide */
 
 
 /*-------------------------
 	Alarm Dialog
---------------------------*/
+	--------------------------*/
 
 
-/* Hide the arrows dispayed in number inputs in webkit */
+	/* Hide the arrows dispayed in number inputs in webkit */
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    display: none;
-}
-
-
-.overlay{
-	display:none;
-	position:fixed;
-	width:100%;
-	height:100%;
-	top:0;
-	left:0;
-	background-color:rgba(0,0,0,0.2);
-	z-index:10;
-}
-
-#error{
-	width:280px;
-	height:200px;
-	background-color:#fff;
-	border-radius:2px;
-	box-shadow: 0 0 8px rgba(0,0,0,0.2);
-	position:fixed;
-	top:200px;
-	left:57%;
-	margin-left:-250px;
-	text-align:center;
-}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		display: none;
+	}
 
 
+	.overlay{
+		display:none;
+		position:fixed;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		background-color:rgba(0,0,0,0.2);
+		z-index:10;
+	}
 
+	#error{
+		width:280px;
+		height:200px;
+		background-color:#fff;
+		border-radius:2px;
+		box-shadow: 0 0 8px rgba(0,0,0,0.2);
+		position:fixed;
+		top:200px;
+		left:57%;
+		margin-left:-250px;
+		text-align:center;
+	}
 
 
 
 
-.button.blue{
-	background-color:#82cddd;
-
-	background-image:-webkit-linear-gradient(top, #86d3e4, #82cddd);
-	background-image:-moz-linear-gradient(top, #86d3e4, #82cddd);
-	background-image:linear-gradient(top, #86d3e4, #82cddd);
-
-	border-color:#72c1d2;
-}
 
 
 
+	.button.blue{
+		background-color:#82cddd;
 
-#error{
-	height: 80px;
-}
-#error h2{
-	padding: 30px auto 20px;
-	font-size: 15px;
-}
-#error.button{
-	padding: 5px 5px;
-	box-shadow: 0 2px 2px #eee;
-}
+		background-image:-webkit-linear-gradient(top, #86d3e4, #82cddd);
+		background-image:-moz-linear-gradient(top, #86d3e4, #82cddd);
+		background-image:linear-gradient(top, #86d3e4, #82cddd);
+
+		border-color:#72c1d2;
+	}
+
+
+
+
+	#error{
+		height: 80px;
+	}
+	#error h2{
+		padding: 30px auto 20px;
+		font-size: 15px;
+	}
+	#error.button{
+		padding: 5px 5px;
+		box-shadow: 0 2px 2px #eee;
+	}
 
