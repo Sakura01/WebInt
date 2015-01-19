@@ -1,212 +1,74 @@
-/*	Basic Reset and General */
-	* { 
-		margin: 0px; 
-		padding: 0px; 
-	}
-	html, body {
-		min-width: 435px;
-		min-height: 1000px;
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
-	
-
-
-
-		@keyframes pulse {
-			0%   { opacity: 0; }
-			50%  { opacity: 1; }
-			100% { opacity: 0; }
-		}
-		@-webkit-keyframes pulse {
-			0%   { opacity: 0; }
-			50%  { opacity: 1; }
-			100% { opacity: 0; }
-		}
-		
-
-
-
-/*	The Device */
-
-	div.iphone {
-		height: 810px; width: 435px; 
-		position: absolute;
-		margin: auto;
-		top: 0px; bottom: 80px; left: 0px; right: 0px;
-		background: url('http://creativeda.sh/sandbox/social_menu/img/iphone.png') no-repeat center center; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-	}
-	div.screen {
-		height: 568px; width: 320px;
-		position: absolute;
-		top: 119px; left: 59px;
-		overflow: hidden;
-		position: relative;
-	}
-
-
-/*	Content */
-	div.menu {
-		position: absolute;
-		height: 100%; width: 100%;
-		background: url('http://creativeda.sh/sandbox/social_menu/img/blur.jpg') no-repeat center center; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-		
-	}
-	div.menu ul { 
-		width: 600px;
-		list-style: none; 
-		margin: 95px 0px 0px 75px;
-	}
-	div.menu li {
-
-		margin-bottom: 20px;
-		
-		-webkit-transition: all 400ms ease-in-out, opacity 1000ms ease;
-		   -moz-transition: all 400ms ease-in-out, opacity 1000ms ease;
-			-ms-transition: all 400ms ease-in-out, opacity 1000ms ease;
-			 -o-transition: all 400ms ease-in-out, opacity 1000ms ease;
-				transition: all 400ms ease-in-out, opacity 1000ms ease;
-		-webkit-transform: translate3d(-150px, 0px, 0px) scale(0.2);
-		opacity: 0;
-	}
-	div.menu li.visible {
-		-webkit-transform: translate3d(0px, 0px, 0px) scale(1);
-		opacity: 1;
-	}
-
-		
-	div.status {
-		position: absolute;
-		top: 0px; left: 0px;
-		z-index: 200;
-		height: 20px; width: 100%;
-		background: url('http://creativeda.sh/sandbox/social_menu/img/status_black.png') no-repeat center center; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-	}
-	div.status.active {
-		background-image: url('http://creativeda.sh/sandbox/social_menu/img/status_white.png'); 
-	}
-	
-	div.content {
-		position: absolute;
-		top: 0px; left: 0px;
-		height: 568px; width: 320px;
-		background: rgb(250, 250, 250);
-		border: 1px solid rgba(147, 184, 189,0.8);
-		box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
-		border-radius: 5px; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-		-webkit-transition: all 300ms ease-in-out;
-		   -moz-transition: all 300ms ease-in-out;
-		    -ms-transition: all 300ms ease-in-out;
-		     -o-transition: all 300ms ease-in-out;
-		        transition: all 300ms ease-in-out;
-		-webkit-backface-visibility: hidden;
-	}
-	div.content.inactive {
-			cursor: pointer;
-			-webkit-transform: translate3d(160px, 0px, 0px) scale(0.5);
-			   -moz-transform: translate3d(160px, 0px, 0px) scale(0.5);
-			    -ms-transform: translate3d(160px, 0px, 0px) scale(0.5);
-			        transform: translate3d(160px, 0px, 0px) scale(0.5);
-	}
-	
-	
-	div.button {
-			width: 30px; height: 30px;
-			position: absolute;
-			top: 23px; left: 3px;
-			cursor: pointer;
-	}
-	/*Menu buttons*/	
-	.shiny {
-    padding: 4px 20px;
-    /*give the background a gradient*/
-    background:#f3f3f3; /*fallback for browsers that don't support gradients*/
-    background: -webkit-linear-gradient(top, #f3f3f3, #eceef0);
-    background: -moz-linear-gradient(top, #f3f3f3, #eceef0);
-    background: -o-linear-gradient(top, #f3f3f3, #eceef0);
-    background: linear-gradient(top, #f3f3f3, #eceef0);
-    border:2px outset #dad9d8;
-    /*style the text*/
-    font-family:Andika, Arial, sans-serif; /*Andkia is available at http://www.google.com/webfonts/specimen/Andika*/
-    font-size:1.1em;
-    letter-spacing:0.05em;
-    text-transform:uppercase;
-    color:#fff;
-    text-shadow: 0px 1px 10px #000;
-    /*add to small curve to the corners of the button*/
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    /*give the button a drop shadow*/
-    -webkit-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
-    -moz-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
-    box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
-    }
-    /****NOW STYLE THE BUTTON'S HOVER STATE***/
-    .shiny:hover, .shiny:focus {
-    border:2px solid #dad9d8;
-    }
-	/*Bubble+alarm*/
-	#custom_clock{
-		clear:both;float:center;
-	}
-	#message{
-		text-align: center;
-	}
-	#message h1
-	{
-		text-align: left;
-		font-size: 15px;
-	}
-	/*relative*/
-	.bubble{
-		text-align: left;
-	  position:relative;
-	  display: inline-block;
-	  top:10px;
-	  padding: 20px;
-	  color:#ffffff;
-	  background:#00c7cc;
-	  border:2px solid #0ca8b2;
-	  border-radius:20px;
-	  width: 100%;
-	  max-height: 150px;
-	  max-width: 240px;
-	  /*outline:0;*/
-	}
-	.bubble:after{
-	  content: ' ';
-	  position:absolute;
-	  /*left:80px;*/
-	  /*right:0;*/
-	  bottom:-10px;
-	  width:15px;
-	  height:15px;
-	  background:#00c7cc;
-	  border-right: 2px solid #0ca8b2;
-	  border-bottom: 2px solid #0ca8b2;
-	  transform: rotate(45deg);
-	}
+/*Menu buttons*/	
+.shiny {
+	padding: 4px 20px;
+	/*give the background a gradient*/
+	background:#f3f3f3; /*fallback for browsers that don't support gradients*/
+	background: -webkit-linear-gradient(top, #f3f3f3, #eceef0);
+	background: -moz-linear-gradient(top, #f3f3f3, #eceef0);
+	background: -o-linear-gradient(top, #f3f3f3, #eceef0);
+	background: linear-gradient(top, #f3f3f3, #eceef0);
+	border:2px outset #dad9d8;
+	/*style the text*/
+	font-family:Andika, Arial, sans-serif; /*Andkia is available at http://www.google.com/webfonts/specimen/Andika*/
+	font-size:1.1em;
+	letter-spacing:0.05em;
+	text-transform:uppercase;
+	color:#fff;
+	text-shadow: 0px 1px 10px #000;
+	/*add to small curve to the corners of the button*/
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	/*give the button a drop shadow*/
+	-webkit-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+	-moz-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+	box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
+}
+/****NOW STYLE THE BUTTON'S HOVER STATE***/
+.shiny:hover, .shiny:focus {
+	border:2px solid #dad9d8;
+}
+/*Bubble+alarm*/
+#custom_clock{
+	text-align: center;
+}
+#message{
+	text-align: center;
+}
+#message h1
+{
+	text-align: left;
+	font-size: 15px;
+}
+/*relative*/
+.bubble{
+	text-align: left;
+	position:relative;
+	display: inline-block;
+	top:10px;
+	padding: 20px;
+	color:#ffffff;
+	background:#00c7cc;
+	border:2px solid #0ca8b2;
+	border-radius:20px;
+	width: 100%;
+	max-height: 150px;
+	max-width: 240px;
+	/*outline:0;*/
+}
+.bubble:after{
+	content: ' ';
+	position:absolute;
+	/*left:80px;*/
+	/*right:0;*/
+	bottom:-10px;
+	width:15px;
+	height:15px;
+	background:#00c7cc;
+	border-right: 2px solid #0ca8b2;
+	border-bottom: 2px solid #0ca8b2;
+	transform: rotate(45deg);
+}
 
 #message h1{
 	padding-left: 20px;

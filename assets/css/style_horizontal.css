@@ -20,16 +20,18 @@ div.status-horizontal{
 		display: inline-block;
 		height: 100%; width: 20px;
 		border-right: 1px solid black;
-		background: url('../img/status_black-horizontal.png') no-repeat center center; 
+		background: white; 
 		-webkit-background-size: cover;
 		   -moz-background-size: cover;
 		     -o-background-size: cover;
 		        background-size: cover;
 		top: 0px;
+		display: inline-block;
 	}
 
 div.content-horizontal{
-		height: 320px; width: 535px;
-		padding-left: 25px;
-		padding-right: 5px;
+		height: 100%;
+		float: right; 
+		width: 547px;
+		display: inline-block;
 	}

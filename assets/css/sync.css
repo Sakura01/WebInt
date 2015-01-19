@@ -1,0 +1,13 @@
+button#find_devices{
+	width: 100%;
+	background: rgb(40, 137, 154);
+	margin: 10px 0 20px 0;
+}
+
+#div1{
+	padding: 0 5px;
+}
+
+#devices{
+	min-height: 150px;
+}

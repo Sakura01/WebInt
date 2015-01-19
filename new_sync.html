@@ -5,22 +5,24 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
-    <meta name="apple-mobile-web-app-capable" content="yes">  
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">  
+	<meta name="apple-mobile-web-app-capable" content="yes">  
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">  
 
+	<link href="assets/css/iphone-vertical.css" rel="stylesheet" />
 	<link href="assets/css/style.css" rel="stylesheet" />
 	<link href="assets/css/style1.css" rel="stylesheet" />
+	<link href="assets/css/sync.css" rel="stylesheet" />
 
 	<!-- Montserrat Sans -->
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400, 700' rel='stylesheet' type='text/css'>   
 
-		<script>
+	<script>
 		function device()
 		{
 			document.getElementById("div1").style.display="block";
 		}
 		
-		</script>
+	</script>
 </head>
 <body>
 
@@ -32,18 +34,18 @@
 					<ul>
 						<li>
 							<button class="shiny" id="buttonHome" >
-									<img src="assets/img/home.png"/>
+								<img src="assets/img/home.png"/>
 							</button> 
 						</li>
 						<li>
 							<button class="shiny" id="buttonSettings" >
-									<img src="assets/img/settings.png"/>
+								<img src="assets/img/settings.png"/>
 							</button> 
 						</li>
 						<li>
-						<button class="shiny" id="buttonSteps" >
-						<img src="assets/img/steps.png"/>
-						</button>
+							<button class="shiny" id="buttonSteps" >
+								<img src="assets/img/steps.png"/>
+							</button>
 						</li>
 						<li>
 							<button class="shiny" id="buttonSchedule" >
@@ -67,62 +69,62 @@
 						</li>
 					</ul>
 				</div>
-				<div class="status"></div>
+				<div class="status">
+					<img src="http://creativeda.sh/sandbox/social_menu/img/status_black.png" width="320">
+				</div>
 				<div class="content ">
 					<div class="button">
 						<img src="assets/img/menu.png"/>
 					</div>
 					<div id="make_smarter" style="position:absolute;top:80px;">
-					<form name="form1" action="#" onSubmit="return checkListBoxSize()">
-					<h1>Synchronize with devices</h1>
-					<input type="button" class="yes button"name="devices" value="Click to find devices" onclick="device()"><br><br>
-					<div id="div1" style="display:none">
-					<b>5 devices found</b><br><br>
-					<select multiple id="devices" style="width:100%;">
-					  <option>Device 1</option>
-					  <option>Device 2</option>
-					  <option>Device 3</option>
-					  <option>Device 4</option>
-					  <option>Device 5</option>
-					</select>
-					</div><br><br>
-					<p class="yes button">
-					<input type="button" id="test_device" value="OK" name="submit"/>
-					</p>
-					<p class="non button">
-					<input type="button" value="BACK" name="back" onclick="location.href='index.html'"/>
-					</p>
-					<div class="overlay">
+						<form class="form-inline" name="form1" action="#" onSubmit="return checkListBoxSize()">
+							<h1>Synchronize with devices</h1>
+							<button type="button" id="find_devices" class="button-blueish" name="devices" value="Click to find devices" onclick="device()">Click to find devices !</button>
+							<div id="div1" style="display:none">
+								<b>5 devices found</b><br><br>
+								<select multiple id="devices" style="width:100%;" class="form-control">
+									<option>Device 1</option>
+									<option>Device 2</option>
+									<option>Device 3</option>
+									<option>Device 4</option>
+									<option>Device 5</option>
+								</select>
+							</div>
+							<div class="buttons">
+								<button type="button" class="push-left" id="test_device" value="OK" name="submit">OK</button>
+								<button type="button" class="push-right" value="BACK" name="back" onclick="location.href='index.html'">BACK</button>
+							</div>
+							<div class="overlay">
 								<div id="error">
 									<h2>Must select at least one item</h2>
 									<div class="button-holder">
-									<a class="button blue">Close</a>
+										<a class="button blue">Close</a>
 									</div>
 
 								</div>
-					</div>
-					</form>
+							</div>
+						</form>
 					</div>
 				</div>
-			
+
 			</div>
 		</div>
 	</div>
-		<!-- JavaScript Includes -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
-		<script src="assets/js/script.js"></script>
-		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-		<script src="assets/js/menu.js"></script>
-		<script Language="JavaScript">
+	<!-- JavaScript Includes -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+	<script src="assets/js/menu.js"></script>
+	<script Language="JavaScript">
 		var error = $('#error').parent();
 		$('#test_device').click(function() {
 			oSelect=document.getElementById("devices");
 			var count=0;
 			for(var i=0;i<oSelect.options.length;i++){
-			if(oSelect.options[i].selected)
-				count++;
+				if(oSelect.options[i].selected)
+					count++;
 			}
 			if(count<1){
 				error.fadeIn();
@@ -131,10 +133,10 @@
 				window.location='index.html';
 			}
 			
-	         });
+		});
 		error.click(function(){
 			error.fadeOut();
 		});
-		</script>
+	</script>
 </body>
 </html>

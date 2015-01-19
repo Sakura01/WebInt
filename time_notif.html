@@ -4,6 +4,7 @@
 	<!-- Basics -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="assets/css/iphone-vertical.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style1.css" />
 </head>
 
@@ -50,7 +51,9 @@
 						</li>
 					</ul>
 				</div>
-		<div class="status"></div>
+		<div class="status">
+					<img src="http://creativeda.sh/sandbox/social_menu/img/status_black.png" width="320">
+				</div>
 		<div class="content" >
 			<div class="formulaires">
 				<div class="button">
@@ -79,9 +82,10 @@
 				<p class="non button">
 					<button type="button"  onclick="self.location.href='notify_student.html'">Annul</button>
 				</p>
-				<p class="yes button">
-					<button type="button"  id="late" onclick="self.location.href='notify_student.html'">Ok</button>
-				</p>
+				<div class="buttons">
+							<button class="next" type="submit" value="OK" name="submit">OK</button>
+							<button class="skip" type="button" value="SKIP" name="skip">SKIP</button>
+						</div>
 				
 			</div>
 		</div>

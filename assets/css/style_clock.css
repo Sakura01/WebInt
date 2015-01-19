@@ -40,10 +40,8 @@ section, footer, header, aside{
 
 
 #clock{
-	width:250px;
 	padding:20px;
-	margin:75px auto 30px;
-	position:relative;
+	margin-bottom: 15px;
 }
 
 #clock:after{
@@ -78,9 +76,9 @@ section, footer, header, aside{
 	color:#272e38;
 }
 
-#clock.light:after{
+/*#clock.light:after{
 	box-shadow:0 4px 10px rgba(0,0,0,0.15);
-}
+}*/
 
 #clock.light .digits div span{
 	background-color:#272e38;
@@ -112,9 +110,9 @@ section, footer, header, aside{
 	color:#cacaca;
 }
 
-#clock.dark:after{
+/*#clock.dark:after{
 	box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
+}*/
 
 #clock.dark .digits div span{
 	background-color:#cacaca;
