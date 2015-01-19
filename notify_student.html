@@ -90,9 +90,9 @@
 <script src="assets/js/menu.js"></script>	
 <SCRIPT Language="JavaScript">
 	
-	min_load = window.localStorage.getItem('Minute');
-	heure_load = window.localStorage.getItem('Heure');
-	minB_load = window.localStorage.getItem('MinuteB');
+	min_load = window.localStorage.getItem('Minute') || 42;
+	heure_load = window.localStorage.getItem('Heure') || 42;
+	minB_load = window.localStorage.getItem('MinuteB') || 42;
 	if(min_load==-100)
 	{
 		if(minB_load==-100)

@@ -167,7 +167,7 @@ $(function(){
 	//get msg
 	var whatsup=window.localStorage.getItem('MSG');
 	var msgdiv = document.getElementById('msg')
-	if (msgdiv){msgdiv.innerHTML=whatsup} ;
+	if (msgdiv && whatsup){msgdiv.innerHTML=whatsup} ;
 	//get trigger from notifs
 	var mint=window.localStorage.getItem('Minute');
 	var mintB=window.localStorage.getItem('MinuteB');
