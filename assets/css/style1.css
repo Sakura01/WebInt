@@ -1,127 +1,3 @@
-
-
-
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
-	margin:0;
-	padding:0;
-}
-
-#steps{
-	font-size: 26px;
-	color: #B0E0E6;
-}
-
-div.iphone {
-		height: 810px; width: 435px; 
-		position: absolute;
-		margin: auto;
-		top: 0px; bottom: 80px; left: 0px; right: 0px;
-		background: url('http://creativeda.sh/sandbox/social_menu/img/iphone.png') no-repeat center center; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-	}
-	div.screen {
-		height: 568px; width: 320px;
-		position: absolute;
-		top: 119px; left: 59px;
-		overflow: hidden;
-		position: relative;
-	}
-	
-	
-		div.menu {
-		position: absolute;
-		height: 100%; width: 100%;
-		background: url('http://creativeda.sh/sandbox/social_menu/img/blur.jpg') no-repeat center center; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-	}
-	div.menu ul { 
-		width: 600px;
-		list-style: none; 
-		margin: 95px 0px 0px 75px;
-	}
-	div.menu li {
-	
-		margin-bottom: 20px;
-		
-		-webkit-transition: all 400ms ease-in-out, opacity 1000ms ease;
-		   -moz-transition: all 400ms ease-in-out, opacity 1000ms ease;
-			-ms-transition: all 400ms ease-in-out, opacity 1000ms ease;
-			 -o-transition: all 400ms ease-in-out, opacity 1000ms ease;
-				transition: all 400ms ease-in-out, opacity 1000ms ease;
-		-webkit-transform: translate3d(-150px, 0px, 0px) scale(0.2);
-		opacity: 0;
-	}
-	div.menu li.visible {
-		-webkit-transform: translate3d(0px, 0px, 0px) scale(1);
-		opacity: 1;
-	}
-	div.menu li a {
-		color: rgba(255,255,255,0.9);
-		text-decoration: none;
-	}
-		
-	
-		div.status {
-		position: absolute;
-		top: 5px; left: 0px;
-		z-index: 200;
-		height: 20px; width: 100%;
-		background: url('http://creativeda.sh/sandbox/social_menu/img/status_black.png') no-repeat center center; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-	}
-	div.status.active {
-		background-image: url('http://creativeda.sh/sandbox/social_menu/img/status_white.png'); 
-	}
-	
-	div.button {
-		width: 30px; height: 30px;
-		position: absolute;
-		top: 30px; left: 10px;
-		cursor: pointer;
-	}
-
-
-	
-	/*Menu buttons*/	
-	.shiny {
-    padding: 4px 20px;
-    /*give the background a gradient*/
-    background:#f3f3f3; /*fallback for browsers that don't support gradients*/
-    background: -webkit-linear-gradient(top, #f3f3f3, #eceef0);
-    background: -moz-linear-gradient(top, #f3f3f3, #eceef0);
-    background: -o-linear-gradient(top, #f3f3f3, #eceef0);
-    background: linear-gradient(top, #f3f3f3, #eceef0);
-    border:2px outset #dad9d8;
-    /*style the text*/
-    font-family:Andika, Arial, sans-serif; /*Andkia is available at http://www.google.com/webfonts/specimen/Andika*/
-    font-size:1.1em;
-    letter-spacing:0.05em;
-    text-transform:uppercase;
-    color:#fff;
-    text-shadow: 0px 1px 10px #000;
-    /*add to small curve to the corners of the button*/
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    /*give the button a drop shadow*/
-    -webkit-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
-    -moz-box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
-    box-shadow: rgba(0, 0, 0, .55) 0 1px 6px;
-    }
-    /****NOW STYLE THE BUTTON'S HOVER STATE***/
-    .shiny:hover, .shiny:focus {
-    border:2px solid #dad9d8;
-    }
-	
 /** fonts used for the icons **/ 
 @font-face {
     font-family: 'FontomasCustomRegular';
@@ -145,69 +21,6 @@ div.iphone {
 
 }
 
-/** The content for content **/
-.content{
-	position: absolute;
-		top: 0px; left: 0px;
-		height: 568px; width: 320px;
-		background: #dbe4e6 no-repeat center center; 
-		-webkit-background-size: cover;
-		   -moz-background-size: cover;
-		     -o-background-size: cover;
-		        background-size: cover;
-		-webkit-transition: all 300ms ease-in-out;
-		   -moz-transition: all 300ms ease-in-out;
-		    -ms-transition: all 300ms ease-in-out;
-		     -o-transition: all 300ms ease-in-out;
-		        transition: all 300ms ease-in-out;
-		-webkit-backface-visibility: hidden;	
-}
-.content.inactive {
-			cursor: pointer;
-			-webkit-transform: translate3d(160px, 0px, 0px) scale(0.5);
-			   -moz-transform: translate3d(160px, 0px, 0px) scale(0.5);
-			    -ms-transform: translate3d(160px, 0px, 0px) scale(0.5);
-			        transform: translate3d(160px, 0px, 0px) scale(0.5);
-}
-
-
-.content h1{
-	margin-top:50px;
-	font-size: 48px;
-	color: black;
-	padding: 2px 0 10px 0;
-	font-family: 'FranchiseRegular','Arial Narrow',Arial,sans-serif;
-	font-weight: bold;
-	text-align: center;
-	padding-bottom: 30px;
-}
-/** For the moment only webkit supports the background-clip:text; */
-
-.content h1:after{
-	content: ' ';
-	display: block;
-	width: 100%;
-	height: 2px;
-	margin-top: 25px;
-	background: -moz-linear-gradient(left, rgba(147,184,189,0) 0%, rgba(147,184,189,0.8) 20%, rgba(147,184,189,1) 53%, rgba(147,184,189,0.8) 79%, rgba(147,184,189,0) 100%); 
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(147,184,189,0)), color-stop(20%,rgba(147,184,189,0.8)), color-stop(53%,rgba(147,184,189,1)), color-stop(79%,rgba(147,184,189,0.8)), color-stop(100%,rgba(147,184,189,0))); 
-	background: -webkit-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-	background: -o-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-	background: -ms-linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-	background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(147,184,189,0.8) 20%,rgba(147,184,189,1) 53%,rgba(147,184,189,0.8) 79%,rgba(147,184,189,0) 100%); 
-}
-
-.content p{
-	margin-bottom:30px;
-}
-
-.content label{
-	color: rgb(64, 92, 96);
-	position: relative;
-}
-
-
-
 /* all the input except submit and checkbox */
 #ListeElement,
 .content textarea,
@@ -222,14 +35,19 @@ div.iphone {
 	transition: all 0.2s linear;
 }
 
-
-
-
 /*styling both submit buttons */
-.content p button,
-.content p.button input{
-	width: 50%;
+
+.buttons{
+	bottom: 0;
+	margin-top: 20px;
+	width: 100%;
+}
+
+.button-blueish,
+.buttons button{
+	width: 35%;
 	cursor: pointer;	
+	display: inline-block;
 	background: #B0E0E6;
 	padding: 8px 5px;
 	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
@@ -242,37 +60,30 @@ div.iphone {
 	           0px 5px 3px 3px rgb(210, 210, 210);
 	transition: all 0.2s linear;
 }
-.content p.button input:hover{
+.button-blueish:hover,
+.buttons button:hover{
 	background: rgb(74, 179, 198);
 }
-.content p.button input:active,
-.content p.button input:focus{
+.button-blueish:active,
+.button-blueish:focus,
+.buttons button:active,
+.buttons button:focus{
 	background: rgb(40, 137, 154);
 	position: relative;
 	top: 1px;
 	border: 1px solid rgb(12, 76, 87);	
 	box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
 }
-p.login.button,
-p.signin.button{
-	text-align: right;
-	margin: 5px 0;
-}
 
-p.yes.button{
-	position:absolute;
-	width: 50%;
-	text-align: left;
-	display:inline-block;
+.buttons button.push-right{
 	float:left;
+	margin-left: 20px;
 	
 }
 
-p.non.button{
-	width: 50%;
-	text-align: right;
-	display:inline-block;
+.buttons button.push-left{
 	float:right;
+	margin-right: 20px;
 	
 }
 /*button welcome*/
@@ -290,6 +101,25 @@ p.non.button{
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 	display: block;
 	margin : auto;
+}
+
+.formulaires p{
+	text-align:center;
+}
+
+.welcome{
+	margin: 20px 0 20px 70px;
+	background: none repeat scroll 0 0 #b0e0e6;
+    border-radius: 3px;
+    box-shadow: 0 1px 6px 4px rgba(0, 0, 0, 0.07) inset, 0 0 0 3px rgb(254, 254, 254), 0 5px 3px 3px rgb(210, 210, 210);
+    color: #fff;
+    cursor: pointer;
+    font-family: "BebasNeueRegular","Arial Narrow",Arial,sans-serif;
+    font-size: 24px;
+    padding: 8px 5px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s linear 0s;
+    width: 50%;
 }
 
 .acc_button:hover{
@@ -321,24 +151,54 @@ p.non.button{
 	font-size: 12px;	
 }
 
+/* Breadcrumbs
 
-/*styling the links to change from one form to another */
-
-p.change_link{
+	We really miss...
+		>> SASS <<
+*/
+nav.breadcrumbs{
 	position: absolute;
 	color: rgb(127, 124, 124);
 	left: 0px;
-	bottom: 45px;
+	bottom: 0;
 	height: 20px;
-	width: 320px;
+	width: 100%;
 	padding: 17px 10px 20px 0px;
 	font-size: 16px	;
 	text-align: left;
 	border-top: 1px solid rgb(219, 229, 232);
 	border-radius: 0 0  5px 5px;
 	background: rgb(225, 234, 235);
+	text-align: center;
 }
+nav.breadcrumbs ul{
+	display: list-style: outside none none;;
+}
+
+nav.breadcrumbs ul li{
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+nav.breadcrumbs ul li.active{
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: bold;
+}
+
+nav.breadcrumbs ul li:after{
+	content: ">";
+	padding: 0 5px 0 15px;
+}
+
+nav.breadcrumbs ul li:last-child:after{
+	content: "";
+}
+
 .content p.change_link a {
+	margin-top: 20px;
 	display: inline-block;
 	font-weight: bold;
 	background: rgb(247, 248, 241);
@@ -363,16 +223,9 @@ p.change_link{
 .formulaires,
 #toregister, 
 #tologin{
-	position: absolute;
-	width: 88%;	
-	height:560px;
-	top: 0px; left: 0px;
-	padding: 18px 6% 60px 6%;
+	height:100%;
+	padding: 0px 6% 0px 6%;
 	margin: 0 auto;
-	background: rgb(250, 250, 250);
-	border: 1px solid rgba(147, 184, 189,0.8);
-	box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
-	border-radius: 5px;
 }
 /*error dialog*/
 .overlay{
@@ -399,12 +252,6 @@ p.change_link{
 	text-align:center;
 }
 
-
-
-
-
-
-
 .button.blue{
 	background-color:#82cddd;
 
@@ -414,9 +261,6 @@ p.change_link{
 
 	border-color:#72c1d2;
 }
-
-
-
 
 #error{
 	height: 80px;
@@ -461,7 +305,46 @@ a.button:hover{
 	opacity:0.9;
 }
 
+.form-centered{
+	text-align: center;
+}
 
+.form-inline .form-control {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+}
+.form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
 
+input.form-control.checkbox{
+	margin-left: 25px;
+}
 
+.form-control:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
 
+.form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1;
+}
+
+.push-right{
+	float: right;
+}

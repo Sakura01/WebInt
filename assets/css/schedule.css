@@ -81,6 +81,7 @@ ul.nice-list li:hover, ul.nice-list li:focus{
     color: #fff;
 }
 
+.btn-back,
 .btn-submit{
 	background: none repeat scroll 0 0 #b0e0e6;
     border-radius: 3px;
@@ -91,6 +92,11 @@ ul.nice-list li:hover, ul.nice-list li:focus{
     font-size: 24px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
     transition: all 0.2s linear 0s;
+}
+
+.btn-back{
+    background: none repeat scroll 0 0 #a0d0d6;
+    font-size: 20px;
 }
 
 .btn-xs{

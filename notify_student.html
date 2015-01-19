@@ -3,6 +3,7 @@
 
 	<!-- Basics -->
 	<meta charset="utf-8">
+	<link href="assets/css/iphone-vertical.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style1.css" />
 </head>
 
@@ -48,34 +49,33 @@
 						</li>
 					</ul>
 				</div>
-		<div class="status"></div>	
+		<div class="status">
+					<img src="http://creativeda.sh/sandbox/social_menu/img/status_black.png" width="320">
+				</div>	
 		<div class="content">
 			
+			<div class="button">
+				<img src="assets/img/menu.png"/>
+			</div>
 			<div class="formulaires" >
-				<div class="button">
-					<img src="assets/img/menu.png"/>
-				</div>
-				<form action="index.html" autocomplete="on">
-					&nbsp
+				<form action="index.html" autocomplete="on" class="form-inline">
 					<h1> Notify student</h1> 
 					<p>
 						<label for="comment" >Message to student:</label></br>  
-						<textarea name='comment' id='comment'></textarea><br />
+						<textarea name='comment' id='comment' class="form-control" style="height: 150px; width: 240px;"></textarea><br />
 					</p>
 					<p>
 						<label for="ListeElement" >Notification Type:</label><br/>
-						<select id="ListeElement" onChange="location = this.options[this.selectedIndex].value;"> 
+						<select id="ListeElement" onChange="location = this.options[this.selectedIndex].value;" class="form-control"> 
 							<option value="#">Absent</option> 
 							<option value="time_notif.html" >Late<a href="page2.html"></a> </option> 
 							<option value="#">Replace</option> 
 						</select> <br />
 					</p>
-					<p class="yes button">
-						<input type='submit' value='Send'/> 
-					</p>
-					<p class="non button">
-						<input type="submit" value="Annul"/>
-					</p>
+					<div class="buttons">
+						<button class="push-right" type="submit" value="OK" name="submit">OK</button>
+						<button class="push-left" type="button" value="SKIP" name="skip" onclick="location.href='index.html'">BACK</button>
+					</div>
 				</form>
 			</div>
 		</div>
@@ -90,9 +90,9 @@
 <script src="assets/js/menu.js"></script>	
 <SCRIPT Language="JavaScript">
 	
-	min_load = window.localStorage.getItem('Minute');
-	heure_load = window.localStorage.getItem('Heure');
-	minB_load = window.localStorage.getItem('MinuteB');
+	min_load = window.localStorage.getItem('Minute') || 42;
+	heure_load = window.localStorage.getItem('Heure') || 42;
+	minB_load = window.localStorage.getItem('MinuteB') || 42;
 	if(min_load==-100)
 	{
 		if(minB_load==-100)

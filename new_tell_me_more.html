@@ -5,9 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
-    <meta name="apple-mobile-web-app-capable" content="yes">  
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">  
-    <link href="assets/css/style.css" rel="stylesheet" />
+	<meta name="apple-mobile-web-app-capable" content="yes">  
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">  
+	<link href="assets/css/iphone-vertical.css" rel="stylesheet" />
+	<link href="assets/css/style.css" rel="stylesheet" />
 	<link href="assets/css/style1.css" rel="stylesheet" />
 
 	<!-- Montserrat Sans -->
@@ -25,18 +26,18 @@
 					<ul>
 						<li>
 							<button class="shiny" id="buttonHome" >
-									<img src="assets/img/home.png"/>
+								<img src="assets/img/home.png"/>
 							</button> 
 						</li>
 						<li>
 							<button class="shiny" id="buttonSettings" >
-									<img src="assets/img/settings.png"/>
+								<img src="assets/img/settings.png"/>
 							</button> 
 						</li>
 						<li>
-						<button class="shiny" id="buttonSteps" >
-						<img src="assets/img/steps.png"/>
-						</button>
+							<button class="shiny" id="buttonSteps" >
+								<img src="assets/img/steps.png"/>
+							</button>
 						</li>
 						<li>
 							<button class="shiny" id="buttonSchedule" >
@@ -60,46 +61,48 @@
 						</li>
 					</ul>
 				</div>
-				<div class="status"></div>
+				<div class="status">
+					<img src="http://creativeda.sh/sandbox/social_menu/img/status_black.png" width="320">
+				</div>
 				<div class="content ">
-				<div id="tologin" >
 					<div class="button">
 						<img src="assets/img/menu.png"/>
 					</div>
-					
-					<form action="new_make_smarter.html" name="myForm">
-					<h1> Tell me more </h1>
-					<b>How long to prepare?</b><br>
-					From&nbsp;<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;to&nbsp;&nbsp;<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b><br><br>
-					<b>How long to school?</b><br>
-					From&nbsp;<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;to&nbsp;&nbsp;<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b><br><br>
-					<b>Arrive early?</b><br>
-					<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;Before start<br><br>
-					<p class="yes button">
-					<input type="submit" value="OK" name="submit" />
-					</p>
-					<p class="non button">
-					<input type="submit" value="SKIP" name="skip"/>
-					</p>
-					<p class="change_link">  
-						<em>step1 ></em> 
-						<em> step2 > </em>
-						<em  id="steps"> step3 </em>
-						
-					</p>
-					</form>
+					<div id="tologin" >
+
+						<form action="new_make_smarter.html" name="myForm">
+							<h1> Tell me more </h1>
+							<b>How long to prepare?</b><br>
+							From&nbsp;<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;to&nbsp;&nbsp;<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b><br><br>
+							<b>How long to school?</b><br>
+							From&nbsp;<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;to&nbsp;&nbsp;<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b><br><br>
+							<b>Arrive early?</b><br>
+							<input type="number" min="0" max="60" name="tell_me" style="width:50px;">&nbsp;&nbsp;<b>min</b>&nbsp;&nbsp;	Before start<br><br>
+							
+							<div class="buttons">
+								<button class="push-right" type="submit" value="OK" name="submit">OK</button>
+								<button onclick="location.href='index.html'" class="push-left" type="button" value="SKIP" name="skip">SKIP</button>
+							</div>
+							<nav class="breadcrumbs">  
+								<ul>
+									<li>step1</li> 
+									<li id="steps" class="active">step2</li>
+									<li>step3</li>
+								</ul>
+							</nav>
+						</form>
 					</div>
 				</div>
-			
+
 			</div>
 		</div>
 	</div>
-		<!-- JavaScript Includes -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
-		<script src="assets/js/script.js"></script>
-		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-		<script src="assets/js/menu.js"></script>
+	<!-- JavaScript Includes -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+	<script src="assets/js/menu.js"></script>
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 <head>
 	<meta charset="UTF-8" />
+	<link href="assets/css/iphone-vertical.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style1.css" />
 
 </head>
@@ -49,26 +50,28 @@
 						</li>
 					</ul>
 				</div>
-				<div class="status"></div>	
+				<div class="status">
+					<img src="http://creativeda.sh/sandbox/social_menu/img/status_black.png" width="320">
+				</div>	
 				
 				<div class="content">
 					
-					<div id="tologin" >
-						<div class="button">
+					<div class="button">
 						<img src="assets/img/menu.png"/>
-						</div>
-						<form  action="" autocomplete="on" > 
+					</div>
+					<div id="tologin" >
+						<form class="form-inline" action="" autocomplete="on" > 
 							<h1>Login</h1>
 							<p> 
 								<label for="password" class="youpasswd"> Your password </label></br>
-								<input id="password" name="password" type="password" placeholder="eg. X8df!90EO" /> 
+								<input id="password" class="form-control" name="password" type="password" placeholder="eg. X8df!90EO" /> 
 							</p>
 							<p class="keeplogin"> 
-								<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+								<input type="checkbox" class="form-control" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
 								<label for="loginkeeping">Stay connected</label>
 							</p>
 							<p class="login button"> 
-								<input type="button" id="test" name="valid_password" value="Login" /> 
+								<button type="button" class="button-blueish" id="test" name="valid_password" value="Login">Login</button> 
 							</p>
 							<p class="change_link">
 								Haven't registered yet?
