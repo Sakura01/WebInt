@@ -10,94 +10,91 @@
 
 <body>
 
-<div class="iphone">
-	<div class="screen">
-		<div class="menu">
-					<ul>
-						<li>
-							<button class="shiny" id="buttonHome" >
-									<img src="assets/img/home.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonSettings" >
-									<img src="assets/img/settings.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonSteps" >
-									<img src="assets/img/steps.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonSchedule" >
-								<img src="assets/img/schedule.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonNotification" > 
-								<img src="assets/img/notification.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonDevice">
-								<img src="assets/img/devices.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonQuit">
-								<img src="assets/img/quit.png"/>
-							</button>  
-						</li>
-					</ul>
-				</div>
-		<div class="status">
-					<img src="http://creativeda.sh/sandbox/social_menu/img/status_black.png" width="320">
-				</div>
-		<div class="content" >
-			<div class="formulaires">
+	<div class="iphone">
+		<div class="screen">
+			<div class="menu">
+				<ul>
+					<li>
+						<button class="shiny" id="buttonHome" >
+							<img src="assets/img/home.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonSettings" >
+							<img src="assets/img/settings.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonSteps" >
+							<img src="assets/img/steps.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonSchedule" >
+							<img src="assets/img/schedule.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonNotification" > 
+							<img src="assets/img/notification.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonDevice">
+							<img src="assets/img/devices.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonQuit">
+							<img src="assets/img/quit.png"/>
+						</button>  
+					</li>
+				</ul>
+			</div>
+			<div class="status">
+				<img src="http://creativeda.sh/sandbox/social_menu/img/status_black.png" width="320">
+			</div>
+			<div class="content" >
 				<div class="button">
 					<img src="assets/img/menu.png"/>
 				</div>
-				<h1>Late by how much time?</h1>
-				
-				<p>
-					<input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value)" />
-					<span id="range">0min</span></br>
-				</p>
-				<script type="text/javascript">
-					function showValue(newValue)
-					{
-						document.getElementById("range").innerHTML=newValue+"min";
-					}
-				</script>
-				<p>
-				<label for="heure_notif" >Hour:</label><br/>
-				<input id="heure_notif" type="number" name="time">
-				</p>
-				<p>
-				<label for="minute_notif" >Minute:</label><br/>
-				<input id="minute_notif" type="number" name="time">
-				</p>
-				<p class="non button">
-					<button type="button"  onclick="self.location.href='notify_student.html'">Annul</button>
-				</p>
-				<div class="buttons">
-							<button class="next" type="submit" value="OK" name="submit">OK</button>
-							<button class="skip" type="button" value="SKIP" name="skip">SKIP</button>
-						</div>
-				
+				<form class="formulaires form-inline form-centered">
+					<h1>Late by how much time?</h1>
+
+					<p>
+						<input type="range" min="0" max="50" value="0" step="5" onchange="showValue(this.value)" onload="showValue(this.value)" />
+						<span id="range">0min</span></br>
+					</p>
+					<script type="text/javascript">
+						function showValue(newValue)
+						{
+							document.getElementById("range").innerHTML=newValue+"min";
+						}
+					</script>
+					<p>
+						<label for="heure_notif" >Hour:</label><br/>
+						<input id="heure_notif" class="form-control" type="number" name="time">
+					</p>
+					<p>
+						<label for="minute_notif" >Minute:</label><br/>
+						<input id="minute_notif" class="form-control" type="number" name="time">
+					</p>
+					<div class="buttons">
+						<button class="push-right" type="submit" value="OK" name="submit">OK</button>
+						<button class="push-left" type="button" value="SKIP" name="BACK" onclick="self.location.href='notify_student.html'">BACK</button>
+					</div>
+
+				</form>
 			</div>
 		</div>
 	</div>
-</div>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
-<script src="assets/js/script.js"></script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-<script src="assets/js/menu.js"></script>
-<script src="assets/js/script_notif_save.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+	<script src="assets/js/menu.js"></script>
+	<script src="assets/js/script_notif_save.js"></script>
 </body>
 
 </html>

@@ -5,126 +5,123 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  
-    <meta name="apple-mobile-web-app-capable" content="yes">  
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">  
+	<meta name="apple-mobile-web-app-capable" content="yes">  
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">  
 
-    <link href="assets/css/iphone-vertical.css" rel="stylesheet" />
+	<link href="assets/css/iphone-vertical.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="assets/css/style1.css" />
 
 </head>
 
 <body>
-<div class="iphone">
-	<div class="screen">
-		<div class="menu">
-					<ul>
-						<li>
-							<button class="shiny" id="buttonHome" >
-									<img src="assets/img/home.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonSettings" >
-									<img src="assets/img/settings.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonSteps" >
-									<img src="assets/img/steps.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonSchedule" >
-								<img src="assets/img/schedule.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonNotification" > 
-								<img src="assets/img/notification.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonDevice" >
-								<img src="assets/img/devices.png"/>
-							</button> 
-						</li>
-						<li>
-							<button class="shiny" id="buttonQuit">
-								<img src="assets/img/quit.png"/>
-							</button>  
-						</li>
-					</ul>
-				</div>
-		<div class="status">
-					<img src="http://creativeda.sh/sandbox/social_menu/img/status_black.png" width="320">
-				</div>		 
-		<div class="content">
-			
-			<div id="toregister" >
-				<div class="button">
-				<img src="assets/img/menu.png"/>
-				</div>
-				<form   action="new_tell_me_more.html" autocomplete="on"> 
-					<h1> Who are you? </h1> 
-					<p> 
-						<label for="usernamesignup" class="uname" >Username</label></br>
-						<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="name" />
-					</p>
-					<p> 
-						<label for="emailsignup" class="youmail" > Email</label> </br>
-						<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="name@eurecom.com"/> 
-					</p>
-					<p> 
-						<label for="passwordsignup" class="youpasswd" >Password </label> </br>
-						<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
-					</p>
-					
-					<p class="login button"> 
-							<input type="submit" id="test" name="valid_password" value="Ok" /> 
-					</p>
-					
-					<div>
-						<em id="steps">step1</em> 
-						<em>> step2 > </em>
-						<em>step3  </em>
-					</div>
-					
-					
-					<p class="change_link">  
-						Already registered ?
-						<a href="login.html#tologin"> Login </a>
-					</p>
-					
-					
-				</form>
+	<div class="iphone">
+		<div class="screen">
+			<div class="menu">
+				<ul>
+					<li>
+						<button class="shiny" id="buttonHome" >
+							<img src="assets/img/home.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonSettings" >
+							<img src="assets/img/settings.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonSteps" >
+							<img src="assets/img/steps.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonSchedule" >
+							<img src="assets/img/schedule.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonNotification" > 
+							<img src="assets/img/notification.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonDevice" >
+							<img src="assets/img/devices.png"/>
+						</button> 
+					</li>
+					<li>
+						<button class="shiny" id="buttonQuit">
+							<img src="assets/img/quit.png"/>
+						</button>  
+					</li>
+				</ul>
 			</div>
-			
+			<div class="status">
+				<img src="http://creativeda.sh/sandbox/social_menu/img/status_black.png" width="320">
+			</div>		 
+			<div class="content">
+
+				<div id="toregister" >
+					<div class="button">
+						<img src="assets/img/menu.png"/>
+					</div>
+					<form  class="form-inline" action="new_tell_me_more.html" autocomplete="on"> 
+						<h1> Who are you? </h1> 
+						<p> 
+							<label for="usernamesignup" class="uname" >Username</label></br>
+							<input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="name" class="form-control"/>
+						</p>
+						<button class="button-blueish push-right" type="submit" id="test" name="valid_password" value="Ok">OK</button> 
+						<p> 
+							<label for="emailsignup" class="youmail" > Email</label> </br>
+							<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="name@eurecom.com"  class="form-control"/> 
+						</p>
+						<p> 
+							<label for="passwordsignup" class="youpasswd" >Password </label> </br>
+							<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"  class="form-control"/>
+						</p>
+
+						<p class="change_link">  
+							Already registered ?
+							<a href="login.html#tologin"> Login </a>
+						</p>
+
+						<nav class="breadcrumbs">  
+							<ul>
+								<li id="steps" class="active">step1</li> 
+								<li>step2</li>
+								<li>step3</li>
+							</ul>
+						</nav>
+
+					</form>
+				</div>
+
+			</div>
 		</div>
 	</div>
-</div>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
-<script src="assets/js/script.js"></script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
-<script src="assets/js/menu.js"></script>
-<script Language="JavaScript">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+	<script src="assets/js/script.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+	<script src="assets/js/menu.js"></script>
+	<script Language="JavaScript">
 
-$('#test').click(function(){
-	
-	var emailT = document.getElementById("emailsignup").value;
-	var result = emailT.split('@')[0];
-	if(result.indexOf(".") != -1)
-	
-		window.localStorage.setItem('distinction',0);
-	else
-		
-		window.localStorage.setItem('distinction',1);
-	
-});
+		$('#test').click(function(){
+
+			var emailT = document.getElementById("emailsignup").value;
+			var result = emailT.split('@')[0];
+			if(result.indexOf(".") != -1)
+
+				window.localStorage.setItem('distinction',0);
+			else
+
+				window.localStorage.setItem('distinction',1);
+
+		});
 
 
-</script>
+	</script>
 
 
 </body>

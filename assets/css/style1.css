@@ -179,6 +179,7 @@ nav.breadcrumbs ul li:last-child:after{
 }
 
 .content p.change_link a {
+	margin-top: 20px;
 	display: inline-block;
 	font-weight: bold;
 	background: rgb(247, 248, 241);
@@ -285,7 +286,9 @@ a.button:hover{
 	opacity:0.9;
 }
 
-
+.form-centered{
+	text-align: center;
+}
 
 .form-inline .form-control {
     display: inline-block;
@@ -317,4 +320,8 @@ a.button:hover{
 .form-control::-moz-placeholder {
     color: #999;
     opacity: 1;
+}
+
+.push-right{
+	float: right;
 }
