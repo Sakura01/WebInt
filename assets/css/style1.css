@@ -103,6 +103,25 @@
 	margin : auto;
 }
 
+.formulaires p{
+	text-align:center;
+}
+
+.welcome{
+	margin: 20px 0 20px 70px;
+	background: none repeat scroll 0 0 #b0e0e6;
+    border-radius: 3px;
+    box-shadow: 0 1px 6px 4px rgba(0, 0, 0, 0.07) inset, 0 0 0 3px rgb(254, 254, 254), 0 5px 3px 3px rgb(210, 210, 210);
+    color: #fff;
+    cursor: pointer;
+    font-family: "BebasNeueRegular","Arial Narrow",Arial,sans-serif;
+    font-size: 24px;
+    padding: 8px 5px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s linear 0s;
+    width: 50%;
+}
+
 .acc_button:hover{
 	background: rgb(74, 179, 198);
 }
