@@ -72,19 +72,17 @@
 						<img src="assets/img/menu.png"/>
 					</div>
 					<div id="make_smarter" >
-						<form name="form1" action="#" >
+						<form name="form1" class="form-inline" action="#" >
 							<h1>Make it smarter</h1>
-							<input type="checkbox" name="smart[]" value="gps" id="gps">Use GPS to detect when I arrive <br>
-							<input type="checkbox" name="smart[]" value="logs" id="logs">Use logs to auto-adjust prepare time <br>
-							<input type="checkbox" name="smart[]" value="notify" id="notify">Push-up notifications when adjusting <br>
+							<input class="form-control checkbox" type="checkbox" name="smart[]" value="gps" id="gps"> Use GPS to detect when I arrive <br>
+							<input class="form-control checkbox" type="checkbox" name="smart[]" value="logs" id="logs"> Use logs to auto-adjust prepare time <br>
+							<input class="form-control checkbox" type="checkbox" name="smart[]" value="notify" id="notify"> Push-up notifications when adjusting <br>
 							<br>
 							
-							<p class="yes button">
-								<input type="button" value="OK" name="submit" onclick="location.href='index.html'" />
-							</p>
-							<p class="non button">
-								<input type="button" value="SKIP" name="skip"  onclick="location.href='index.html'"/>
-							</p>
+							<div class="buttons">
+								<button class="push-right" type="submit" value="OK" name="submit" onclick="location.href='index.html'">OK</button>
+								<button class="push-left" type="button" value="SKIP" name="skip"  onclick="location.href='index.html'">SKIP</button>
+							</div>
 							
 							
 							<nav class="breadcrumbs">  
